@@ -1,0 +1,42 @@
+[INTERNAL] Pull the certificate of incorporation already on file and note the exact legal name, spelling, spacing, and suffix (Private Limited / Pvt Ltd / P Ltd) as printed
+[INTERNAL] Pull the bank proof already submitted (cancelled cheque, bank statement, or bank letter) and record the exact account holder name as printed on it
+[INTERNAL] Write down a character-by-character comparison of the two names and classify the mismatch type: abbreviation, truncation by bank field length, missing suffix, spelling error, trade name used instead of legal name, or a genuinely different entity
+[INTERNAL] Check the CIN on the certificate of incorporation against the MCA public register to confirm the company is active and the legal name currently registered matches the certificate
+[INTERNAL] Check whether the MCA record shows any past name change of the company, since an old name on the bank account is a common and explainable cause of this mismatch
+[INTERNAL] Pull the PAN card of the company already on file and check the name on PAN against both the incorporation certificate and the bank proof
+[INTERNAL] Pull the GST certificate on file (if submitted) and check the legal name and trade name fields, as the bank may have opened the account in the trade name
+[INTERNAL] Pull the bank account number and IFSC from the merchant's settlement details in the system and confirm they match the bank proof document exactly
+[INTERNAL] Run the penny drop or bank account validation result already stored for this account and read the beneficiary name returned by the bank, which is the name the bank itself holds
+[INTERNAL] Compare the penny drop beneficiary name with the incorporation name and record whether the bank's own record supports the merchant or confirms the mismatch
+[INTERNAL] Pull the authorised signatory details, board resolution, and director list already collected during onboarding and confirm the person who submitted the bank proof is authorised to operate that account
+[INTERNAL] Pull the KYC of directors and beneficial owners already on file (PAN, Aadhaar or passport, address proof) and confirm they are complete and unexpired
+[INTERNAL] Check the registered address on the incorporation certificate against the address on the bank proof and the address declared during onboarding
+[INTERNAL] Search internal systems for any other merchant account using the same CIN, PAN, bank account number, director PAN, email, phone, or website, to rule out duplicate or split accounts
+[INTERNAL] Check the merchant against RBI, sanctions, PEP, and adverse media screening lists already run at onboarding and confirm no hit is open
+[INTERNAL] Check whether this bank account has previously appeared on any negative or terminated merchant record in the aggregator's own history
+[INTERNAL] Pull all prior support tickets, emails, and chat logs from this merchant to see if the name difference was already explained and the explanation was never recorded
+[INTERNAL] Confirm from the merchant's file that months active is zero and therefore there is no transaction history, chargeback data, or terminal telemetry to review, and record this so no one asks for it later
+[INTERNAL] Confirm the declared MCC 7372 for software matches the business activity stated in the memorandum of association and on the website already captured at onboarding
+[INTERNAL] Review the merchant's website or app already on record for a working URL, clear description of the software being sold, pricing, and the legal entity name shown in the footer
+[INTERNAL] Check whether the entity name shown on the website or app matches the incorporation certificate, since a third name here widens the problem
+[INTERNAL] Check the internal onboarding checklist for this merchant and list every field marked incomplete or pending, so all gaps are cleared in one pass rather than one at a time
+[ASK] A fresh bank proof in the company's exact legal name as per the certificate of incorporation, being either a cancelled cheque with the printed company name, a bank statement of the last three months on bank letterhead, or a bank passbook first page
+[ASK] If the bank cannot print the full name, a signed and stamped letter from the bank branch on its letterhead confirming that the account number and IFSC belong to the company whose full legal name is stated in the letter, and explaining the shortened name used in its records
+[ASK] A written explanation from the merchant, on company letterhead and signed by an authorised signatory, stating why the name on the bank proof differs from the incorporation certificate
+[ASK] If the company name was changed after the account was opened, the fresh certificate of incorporation consequent upon name change issued by the Registrar of Companies, plus the board resolution and the shareholder special resolution approving the change
+[ASK] If the name change is genuine but the bank record is old, written confirmation from the bank that its records have been updated to the new name, or the merchant's request letter to the bank with acknowledgement
+[ASK] If the bank proof carries a trade name or brand name, documentary proof linking that trade name to the company, such as the GST certificate showing the trade name, a trademark registration, or a board resolution adopting the brand name
+[ASK] The company's PAN card copy, if the copy on file is unclear or does not match the name on the incorporation certificate
+[ASK] The GST registration certificate, or a signed declaration on letterhead stating the company is not liable to register under GST and giving the reason
+[ASK] A current certificate of incorporation copy, if the copy on file is unclear, cropped, or unsigned
+[ASK] The memorandum and articles of association showing the main objects, to confirm the software business under MCC 7372
+[ASK] A board resolution authorising the named signatory to open the payment aggregator account, accept the merchant agreement, and designate the settlement bank account
+[ASK] A signed and stamped letter naming the settlement bank account, account number, IFSC, branch, and account type, and confirming it is the company's own current account and not a personal or third party account
+[ASK] The latest updated list of directors with their DINs, along with PAN and address proof of any director whose documents on file are missing or expired
+[ASK] Shareholding pattern and beneficial ownership declaration identifying every person holding twenty five percent or more, with their PAN and address proof
+[ASK] Address proof for the registered office, such as a utility bill, rent agreement, or property tax receipt not older than three months, if the address on the bank proof differs from the incorporation address
+[ASK] Confirmation of the live website or app URL, with the legal entity name, contact details, and refund and cancellation policy visible on it
+[ASK] A short written description of the business model covering what software is sold, who the customers are, whether sales are domestic or export, average ticket size, expected monthly volume, and the delivery method
+[ASK] Confirmation that the declared MCC 7372 is correct for the actual business, or a request to change it with reasons, since a wrong MCC on a new account is itself a risk item
+[ASK] A signed declaration that the settlement account will be used only for this company's own business proceeds and not for settling funds of any other entity or person
+[ASK] Contact details of a named compliance or finance person at the merchant who can answer follow up questions directly, to avoid further delay

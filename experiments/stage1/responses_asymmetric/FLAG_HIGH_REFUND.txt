@@ -1,0 +1,31 @@
+[INTERNAL] Full chargeback record for the last 22 months, broken down by month, so we can see whether 2.1% is a sudden spike or a slow climb.
+[INTERNAL] Reason-code split of every chargeback (fraud/unauthorised, item not received, item not as described, duplicate charge, cancelled recurring) — this single split separates a fraud problem from a delivery problem from a quality problem.
+[INTERNAL] Chargeback rate calculated both ways: by count and by value, and against the same month's sales rather than the current month's, to confirm the 2.1% is not just an artefact of falling sales volume.
+[INTERNAL] Whether the 2.1% is concentrated in a few days, a few card BINs, a few issuing banks, or a few end-customers, or spread evenly across the book.
+[INTERNAL] Refund and cancellation rate over the same period — a low refund rate beside a high chargeback rate suggests customers cannot reach the merchant, which is a service problem, not a fraud problem.
+[INTERNAL] Average ticket size trend, and whether disputed transactions sit far above the merchant's normal ticket size.
+[INTERNAL] Mix of card-present versus card-not-present, and domestic versus international cards, in both total sales and disputed sales.
+[INTERNAL] Authentication data on the disputed transactions: 3DS/OTP completion, AVS/CVV outcomes, and whether liability had shifted to the issuer.
+[INTERNAL] Whether disputed transactions were represented (defended) by us or by the merchant, and the win/loss outcome of those representments.
+[INTERNAL] Velocity patterns on the account: sudden surges in transaction count, repeated card numbers, repeated IPs, repeated device fingerprints, unusual hours.
+[INTERNAL] Whether declared MCC 5651 matches observed behaviour — descriptor used, product pages, average ticket, refund pattern — to test the hypothesis of miscoding or transaction laundering for a higher-risk business.
+[INTERNAL] The exact billing descriptor shown on customer statements, and whether it is recognisable as the merchant's brand; an unrecognisable descriptor alone can drive "I don't recognise this charge" chargebacks.
+[INTERNAL] Any customer complaints, issuer retrieval requests, or pre-arbitration notices we already hold, including their text.
+[INTERNAL] Support tickets raised by or about this merchant: delivery complaints, refund delays, failed settlement reports, integration errors.
+[INTERNAL] Payment gateway and API error logs, checkout failure rates, and duplicate-charge or double-submit incidents on our side that could have generated genuine duplicate-transaction disputes.
+[INTERNAL] Any outage, timeout, or reconciliation incident on our platform during the spike window that could have caused failed-but-charged transactions.
+[INTERNAL] Terminal, POS device, and payment-link inventory linked to the merchant, with fault logs, connectivity records, and offline-mode transaction counts if any device is deployed.
+[INTERNAL] Rental, billing, and equipment status for those devices — including any device reported lost, returned, or transferred but still transacting.
+[INTERNAL] All other merchant IDs, terminals, sub-merchants, or accounts tied to the same PAN, GSTIN, CIN, directors, bank account, phone, email, or address, and their dispute rates.
+[INTERNAL] Settlement history: bank account changes, sudden changes in settlement frequency, and any recent request to alter payout details.
+[INTERNAL] Onboarding file and KYC already collected at signup — CIN, PAN, GST, board resolution, director KYC, bank proof, website URL — plus the date it was last refreshed.
+[INTERNAL] Prior risk decisions, earlier reviews, past holds or warnings on this merchant, and what evidence they already submitted then, so we do not ask twice for the same document.
+[INTERNAL] Whether the merchant was already notified of rising disputes before this hold, and how they responded.
+[INTERNAL] Category median methodology check: confirm the 0.4% benchmark is drawn from comparable MCC 5651 merchants of similar size and channel mix, not the whole portfolio.
+[INTERNAL] Current exposure calculation: value on hold, unshipped-order liability estimate, and rolling reserve already held, so the hold size can be justified and sized proportionately.
+[ASK] The merchant's own explanation of the dispute spike, tied to the specific reason codes we found in item 2 — this tests whether they are even aware of the pattern, and no internal record contains their side of events.
+[ASK] Proof of delivery (courier AWB numbers and delivery confirmations) for the specific disputed orders, but only if item 2 shows the disputes are dominated by "item not received" codes.
+[ASK] Evidence of a business change during the spike window — new product line, new courier partner, new marketing channel, flash sale, or a shift to pre-orders and long dispatch times — requested only if item 1 shows a sharp break rather than a gradual rise.
+[ASK] Their current refund and returns policy as published to customers, plus how refund requests reach them, but only if item 5 shows chargebacks far outrunning refunds, suggesting customers could not get a refund the normal way.
+[ASK] Confirmation of who else has access to their payment credentials, keys, or device, requested only if item 10 or item 19 shows patterns consistent with account takeover or an unauthorised reseller using their MID.
+[ASK] A written remediation plan with dates — descriptor fix, dispatch SLA, refund turnaround, fraud rules, customer contact details on the site — which is required to lift the hold and cannot come from any record we hold.

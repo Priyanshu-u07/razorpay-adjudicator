@@ -1,0 +1,74 @@
+{
+  "_README": [
+    "Manual rulings that override the keyword scorer, so adjudicated recall is",
+    "reproducible from a file instead of from prose. Rationale and quoted",
+    "candidate text for every ruling live in results/adjudication.md.",
+    "",
+    "Only 'present' overrides are meaningful: they mark a ground-truth item the",
+    "keyword scorer missed but a human ruled semantically covered. Adding an",
+    "entry here is a claim that must be defensible against the quoted text.",
+    "",
+    "Adjudicator: project author. NOT blind, NOT independent. This is the",
+    "weakest link in the measurement and is flagged as such wherever the",
+    "adjudicated numbers appear."
+  ],
+  "rulings": {
+    "proportionate": {
+      "FLAG_TID_INACTIVITY": {
+        "TI3": "present"
+      }
+    },
+    "asymmetric": {
+      "FLAG_TID_INACTIVITY": {
+        "TI3": "present",
+        "TI6": "present",
+        "TI9": "present"
+      },
+      "FLAG_MCC_MISMATCH": {
+        "MC3": "present",
+        "MC6": "present"
+      },
+      "FLAG_HIGH_REFUND": {
+        "HR1": "present",
+        "HR6": "present"
+      },
+      "FLAG_KYC_DISCREPANCY": {
+        "KD1": "present",
+        "KD2": "present"
+      },
+      "FLAG_THIRD_PARTY_BENEFICIARY": {
+        "TP1": "present",
+        "TP3": "present",
+        "TP7": "present"
+      },
+      "FLAG_CPV_FAILURE": {
+        "CP4": "present"
+      }
+    },
+    "baseline": {
+      "FLAG_VOLUME_SPIKE": {
+        "VS5": "present"
+      },
+      "FLAG_MCC_MISMATCH": {
+        "MC4": "present",
+        "MC6": "present"
+      },
+      "FLAG_HIGH_REFUND": {
+        "HR2": "present",
+        "HR6": "present"
+      },
+      "FLAG_KYC_DISCREPANCY": {
+        "KD1": "present",
+        "KD2": "present"
+      },
+      "FLAG_THIRD_PARTY_BENEFICIARY": {
+        "TP1": "present",
+        "TP3": "present",
+        "TP7": "present"
+      },
+      "FLAG_CPV_FAILURE": {
+        "CP4": "present"
+      }
+    }
+  }
+}

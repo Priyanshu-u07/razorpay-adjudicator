@@ -1,0 +1,30 @@
+[ASK] A written request or declaration from the proprietor asking for the terminal (TID) to be reactivated, signed and dated.
+[ASK] The reason why no card transactions happened for 94 days (for example: shop was closed for repairs, seasonal closure, owner was ill, terminal was faulty, or customers paid mostly by UPI/cash).
+[ASK] A confirmation that the business is still running and still runs as a restaurant (matching MCC 5812), not a different type of business.
+[ASK] Proof that the business is currently open and active, such as recent purchase bills, supplier invoices, electricity bill, or recent UPI/bank statement showing business income during the dormant period.
+[ASK] Recent photos of the shop showing the signboard, the inside of the restaurant, and the terminal installed at the counter (with date or geo-tag if possible).
+[ASK] Confirmation that the business address on file is still correct, and if it has changed, the new address with proof (rent agreement, utility bill, or shop licence at the new address).
+[ASK] A current, valid FSSAI licence or registration (needed for a food business) if the one on file has expired.
+[ASK] A current shop and establishment licence, trade licence, or Udyam registration if the one on file has expired.
+[ASK] Confirmation that the settlement bank account on file is still active and belongs to the proprietor, with a recent cancelled cheque or bank statement if it has changed.
+[ASK] Re-confirmation of the proprietor's identity: current PAN and Aadhaar (or other officially valid document) if the KYC on file is old or due for periodic update.
+[ASK] A recent live photo or video KYC of the proprietor, if the aggregator's policy requires fresh verification for reactivation.
+[ASK] Confirmation that the terminal device is still physically with the merchant at the registered address and has not been moved, sold, or given to anyone else.
+[ASK] Confirmation of expected monthly card transaction volume and average ticket size going forward, so the risk team can compare it with past behaviour.
+[ASK] Declaration that the merchant will not use the terminal for any other business, for cash advances, or for transactions on behalf of third parties.
+[ASK] GST registration details or a declaration of exemption if turnover is below the GST limit, updated if anything has changed.
+[INTERNAL] The original KYC file for the proprietorship (PAN, identity proof, address proof, bank proof) to check what is on record and what has expired.
+[INTERNAL] The onboarding documents showing the declared business type, MCC 5812, and the registered address, to compare with the merchant's current declarations.
+[INTERNAL] The full transaction history of the TID before the dormant period, to see the normal pattern (volume, ticket size, timings) and confirm the drop to zero.
+[INTERNAL] Transaction history on any other payment products the merchant uses with the aggregator (UPI QR, payment links, online gateway), to check if the business stayed active on other channels while the card terminal was idle.
+[INTERNAL] Terminal telemetry records: last heartbeat or ping from the device, last settlement batch, sign-on attempts, and whether the device reported faults, to check if the terminal was broken or switched off.
+[INTERNAL] Support ticket history, to see if the merchant reported a faulty terminal, requested a pause, or raised any complaint during the dormant period.
+[INTERNAL] Chargeback, refund, and dispute history for the account, to confirm there are no open disputes or unusual patterns before reactivating.
+[INTERNAL] Any past risk flags, holds, or investigation notes on this merchant, to check for repeat issues.
+[INTERNAL] Settlement and payout records, including the amount currently on hold and the bank account it is linked to.
+[INTERNAL] Screening checks against negative lists: internal blacklist, card network alerts (such as MATCH/VMSS type lists), and sanctions or fraud databases, run again with current data.
+[INTERNAL] A check of the merchant's name and address against public sources (website, Google listing, food delivery apps) to see signs the restaurant is still operating.
+[INTERNAL] The periodic KYC review due date for this merchant, to know if a full KYC refresh is required now or only the reactivation checks.
+[INTERNAL] Records of the terminal's assigned location and device serial number, to match against the photos and confirmation the merchant provides.
+[INTERNAL] Field visit or agent verification reports from onboarding or any past visit; and if policy requires, an order for a fresh field visit can be raised internally (the visit itself checks the merchant, but the trigger and record are internal).
+[INTERNAL] The aggregator's own dormancy policy record showing the 90-day rule, the date of deactivation, and the alert sent, to document the trigger and closure of the flag properly.

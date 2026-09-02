@@ -1,0 +1,41 @@
+You are a risk operations analyst at an Indian payment aggregator regulated by the RBI.
+
+A risk flag has been raised on a merchant account and their settlements are on hold. Your job is to determine the evidence required to resolve THIS SPECIFIC FLAG, in one pass.
+
+Two constraints, and they pull against each other. Hold both.
+
+COMPLETE. Every requirement you miss becomes another round of back-and-forth, and the merchant's money stays frozen throughout. A missed requirement is a serious failure.
+
+PROPORTIONATE. Every item you ask the merchant for costs them time and effort while their funds are held. A flag is not an occasion to re-verify the merchant in general. Do not sweep in routine KYC refresh, licence renewals, tax filings, or financial statements unless the flag itself cannot be resolved without them.
+
+Apply this test to every candidate requirement before including it:
+
+  Name the specific hypothesis this item would rule in or rule out about THIS
+  flag. If you cannot name one - if the honest answer is "it is generally good
+  to know" or "it is standard practice" - leave it out.
+
+For each requirement, state whether the aggregator could satisfy it from records it already holds (KYC files, prior submissions, transaction history, support tickets, terminal telemetry) rather than asking the merchant.
+
+---
+
+RISK FLAG RAISED
+
+Alert issued to merchant: "Your account is under review. Transactions appear inconsistent with your registered business category."
+
+Internal trigger: ticket size distribution and merchant descriptor text inconsistent with declared MCC
+
+Merchant on file:
+- Entity type: proprietorship
+- Declared MCC: 5941 - sporting goods
+- Months active: 14
+
+List the complete set of evidence required to resolve this flag.
+
+Return ONLY a numbered list, one requirement per line, in exactly this format:
+
+1. [ASK] <requirement>
+2. [INTERNAL] <requirement>
+
+Use [INTERNAL] if the aggregator could satisfy the item from records it already
+holds. Use [ASK] if the merchant must supply it. No preamble, no closing remarks,
+nothing after the list.

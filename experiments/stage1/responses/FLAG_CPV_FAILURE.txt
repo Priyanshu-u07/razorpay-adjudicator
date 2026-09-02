@@ -1,0 +1,71 @@
+[INTERNAL] Pull the field agent's visit report in full — date, time, exact address visited, GPS coordinates, photos taken, and the reason recorded for "untraceable" (no such building, building exists but no signage, occupant denied knowledge, premises locked, etc.)
+[INTERNAL] Check whether the agent visited the address actually on file, by comparing the agent's visited address string against the registered address in the KYC record character by character, including PIN code
+[INTERNAL] Confirm how many visit attempts were made and at what times of day, since a single visit to a small proprietorship office during business hours is weak evidence of non-existence
+[INTERNAL] Retrieve the original address proof submitted at onboarding (utility bill, rent agreement, property tax receipt, or bank statement) and check its issue date and whether it is still within validity
+[INTERNAL] Retrieve the proprietor's PAN and Aadhaar (or other officially valid document) already on file and note the address printed on each
+[INTERNAL] Retrieve the GST registration certificate on file, if the merchant is GST registered, and note the principal place of business and any additional places of business listed on it
+[INTERNAL] Check the Udyam / MSME registration record on file for the registered business address
+[INTERNAL] Check the merchant's current account bank statement on file and note the address the bank has recorded, since the bank did its own KYC
+[INTERNAL] Check whether the merchant has changed address at any point since onboarding, by reviewing support tickets, emails, and any change requests raised in the last three months
+[INTERNAL] Check whether the merchant ever informed the aggregator of a new address and the update was simply not applied to the master record
+[INTERNAL] Pull the settlement bank account details and confirm the account is in the proprietor's or proprietorship's name and is active
+[INTERNAL] Pull the full transaction history for all three months — daily volume, average ticket size, refund rate, chargeback count and ratio, and any sudden spikes
+[INTERNAL] Check whether the chargeback ratio and refund ratio are within the aggregator's thresholds, since an address problem on an otherwise clean book is treated differently from an address problem on a book with rising disputes
+[INTERNAL] Check the customer base spread — are payments coming from a wide set of genuine payers, or repeatedly from a small circle of the same cards or accounts
+[INTERNAL] Check whether transaction activity matches MCC 7311 advertising services, or looks like something else entirely
+[INTERNAL] Pull IP addresses, device fingerprints, and login geolocation from the merchant dashboard and payment API calls, and see whether the operating location is consistent and whether it sits anywhere near the registered address
+[INTERNAL] Pull terminal or POS telemetry if any device was issued, including its last known location and last active timestamp
+[INTERNAL] Pull the website or app URL submitted at onboarding and check whether it is live, whether it displays a contact address, and whether that address matches the file
+[INTERNAL] Run a WHOIS and domain age check on the merchant's website domain and compare the registrant details against the merchant on file
+[INTERNAL] Check the merchant's registered mobile number and email for delivery status — are OTPs landing, are emails bouncing, has the number gone unreachable
+[INTERNAL] Check all support tickets and call recordings from the last three months for any mention by the merchant of a move, a shared office, a co-working space, or a home-based operation
+[INTERNAL] Check whether the merchant appears on any negative list — RBI alerts, NPCI or card network fraud lists, MATCH or terminated merchant files, law enforcement references
+[INTERNAL] Check whether the registered address is shared with any other merchant on the aggregator's books, which may indicate a virtual office or a shell cluster
+[INTERNAL] Check the onboarding channel — direct, referral, reseller, or sub-merchant aggregation — and whether that channel has a history of address problems
+[INTERNAL] Check whether the merchant is a sub-merchant onboarded through a partner, in which case the partner's own verification file must be pulled
+[INTERNAL] Check the video KYC recording from onboarding, if one was done, for any visible background that indicates the actual place of work
+[INTERNAL] Confirm the current settlement hold amount, the number of settlement cycles affected, and the date the hold began, since the RBI nodal account rules limit how long funds can be parked
+[INTERNAL] Confirm whether any customer complaints or police or cyber-cell references exist against the merchant, as this changes the flag from a paperwork issue to a fraud issue
+[ASK] A written confirmation of the merchant's current principal place of business, with the complete address including building name, floor, landmark, and PIN code
+[ASK] A clear explanation, in writing, of why the field agent could not trace the address — for example the merchant moved, works from home, uses a co-working desk, the building is known by a different local name, or the signage is under a different trade name
+[ASK] A fresh officially valid address proof dated within the last two or three months, in the proprietor's name or the firm's name — electricity bill, telephone or broadband bill, gas bill, water bill, property tax receipt, or a bank statement carrying the address
+[ASK] If the premises are rented, a registered or notarised rent agreement or leave-and-licence agreement covering the current period, plus the latest rent receipt
+[ASK] If the premises are owned by the proprietor, the property ownership document or the latest property tax receipt
+[ASK] If the premises belong to a family member, a signed no-objection certificate from the owner along with the owner's own address proof and identity proof
+[ASK] If the merchant operates from a co-working space or a virtual office, the service agreement with that provider, the desk or cabin number, and a letter from the provider confirming the merchant actually occupies space there
+[ASK] If the business is run from home, a plain statement to that effect along with the residential address proof, since a home-based advertising service is normal and does not by itself disqualify the merchant
+[ASK] Geo-tagged photographs of the business premises taken recently — the building exterior, the entrance, the signboard or nameplate, and the interior work area with any staff or equipment visible
+[ASK] A photograph of the nameplate or signboard showing the trade name, or an explanation if no signage exists
+[ASK] The proprietor's PAN card copy, self-attested
+[ASK] The proprietor's Aadhaar or other officially valid identity document, self-attested, with the number masked as required
+[ASK] A recent passport-size photograph of the proprietor, if not already on file or if the one on file is unclear
+[ASK] The GST registration certificate if registered, showing the current principal place of business, plus the latest filed GST return
+[ASK] The Udyam or MSME registration certificate if the merchant holds one
+[ASK] The Shops and Establishments registration or trade licence issued by the local municipal authority for the current address
+[ASK] A professional tax registration certificate, where the state requires one
+[ASK] Bank account proof — a cancelled cheque bearing the proprietor's or firm's name, or a bank statement or passbook first page
+[ASK] The last three to six months of current account bank statements, to confirm the settlement account is live and the business cash flow is consistent with declared turnover
+[ASK] Where the address on the address proof differs from the address on PAN, Aadhaar, GST, or the bank record, a written reconciliation explaining each difference
+[ASK] A formal address change request on the merchant's letterhead, signed by the proprietor, if the address on file is genuinely outdated
+[ASK] A current, reachable mobile number and email address, with the merchant available for a verification call at a stated time window
+[ASK] Availability for a fresh physical verification visit, with a date, a time window, a contact person's name and number at the premises, and directions or a shared live location pin
+[ASK] Willingness to complete a video call verification, where the merchant walks the camera through the premises and reads out the building name and nearby landmarks
+[ASK] A detailed description of the actual business — what advertising services are sold, to whom, how clients are acquired, and how the service is delivered
+[ASK] Sample client contracts, work orders, or purchase orders, with at least two or three clients, showing the merchant's address as printed on the merchant's own paperwork
+[ASK] Sample invoices raised to clients in the last three months, again showing the business address
+[ASK] A client list with contact details for at least two clients willing to confirm the engagement, so the aggregator can independently verify the business exists
+[ASK] Evidence of service delivery — campaign reports, creative samples, published ad placements, or platform account screenshots consistent with MCC 7311
+[ASK] The business website or social media handles, and confirmation that the contact address published there matches the address now being declared
+[ASK] An explanation of any mismatch between the address published on the website or invoices and the address on file
+[ASK] The declared and projected monthly turnover, and an explanation if actual processing has run materially above what was declared at onboarding
+[ASK] A list of all operating locations if the merchant works from more than one place, marking which is the principal place of business
+[ASK] Details of any staff or contractors at the premises, since an advertising firm with no people and no equipment at a claimed office invites further questions
+[ASK] Confirmation of who has operational control of the merchant dashboard and settlement account, and whether any third party or agency operates it on the merchant's behalf
+[ASK] A declaration that the merchant is not acting as a front for another entity and is not permitting transaction routing for any other business
+[ASK] A signed undertaking that the information and documents submitted are true, with the merchant accepting liability for any false declaration
+[ASK] A signed undertaking to inform the aggregator in writing within a stated period of any future change of address or change in the nature of business
+[ASK] Written responses to any specific customer complaints or chargebacks the aggregator has on record, with supporting proof of service delivery for the disputed transactions
+[INTERNAL] After documents come in, run an independent public-record check — GST portal search on the GSTIN, MCA or Udyam lookup, and a map and street-view check of the declared address — before closing the flag
+[INTERNAL] Re-run the sanction, PEP, and adverse media screening on the proprietor with the updated address details
+[INTERNAL] Record the final decision, the evidence relied on, and the reviewer's name in the case file, and update the master KYC record with the verified address so the same flag does not recur
+[INTERNAL] Confirm whether the case meets the internal threshold for a suspicious transaction report, and route it to the principal officer if it does, independent of whether the settlement hold is released

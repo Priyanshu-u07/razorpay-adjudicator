@@ -1,0 +1,16 @@
+[INTERNAL] Full transaction history on this TID for all 31 months, to see if card activity stopped suddenly (points to a device problem) or faded slowly (points to the business slowing down or switching payment methods).
+[INTERNAL] Seasonal pattern check across past years of this merchant's history, to see if the restaurant normally goes quiet in these same months.
+[INTERNAL] Activity on all other TIDs, QR codes, UPI handles, or online payment accounts held by the same merchant, to see if the business is still alive but taking payments through another channel.
+[INTERNAL] Terminal heartbeat and connectivity logs for the 94 days, to see if the device was even switching on and reaching the network.
+[INTERNAL] Device fault and error logs, including failed or declined transaction attempts during the gap, to check whether the merchant tried to take card payments but the machine did not work.
+[INTERNAL] SIM or network line status for the terminal, to check if the connection was cut off or expired.
+[INTERNAL] Support ticket history, to see if the merchant already reported a broken machine, asked for a replacement, or asked to close the terminal.
+[INTERNAL] Terminal rental and billing history, to see if rental charges are still being paid — paying for the machine suggests the merchant still wants it.
+[INTERNAL] Asset and inventory records for this terminal, to check if it was already returned, replaced, swapped, or marked for pickup.
+[INTERNAL] Settlement account history before the gap began, to check for failed payouts or a closed bank account that may have made the merchant stop using the terminal.
+[INTERNAL] Chargeback and dispute history, to rule out that card acceptance stopped after a fraud or dispute problem.
+[INTERNAL] Earlier risk flags or dormancy reviews on this merchant and how they were closed, so past decisions are not repeated or contradicted.
+[INTERNAL] Current KYC file status, to confirm the merchant's details are up to date and no separate re-verification is pending that could be handled in the same pass.
+[ASK] A simple confirmation from the merchant on whether the restaurant is still open and whether they want to keep and use this terminal — only needed if internal checks show the device was healthy, no other payment channel of theirs is active, and no ticket explains the silence. This settles the one question records cannot answer: whether the business has closed, moved to cash or another provider, or plans to resume.
+[ASK] The physical condition and location of the terminal (working, damaged, lost, or in storage) — only needed if telemetry shows the device has been fully offline and there is no support ticket, since an offline device leaves no internal trace of its physical state.
+[ASK] One simple proof that the restaurant is still running, such as a recent utility bill or a current food licence — only needed if the merchant says the business is open but every internal signal (device, other channels, billing) shows no life, to rule out the possibility that the outlet has actually shut down.

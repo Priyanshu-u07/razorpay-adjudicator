@@ -1,0 +1,953 @@
+[
+  {
+    "case_id": "C001",
+    "flag_type": "FLAG_TID_INACTIVITY",
+    "scenario": "broken_terminal_open_ticket",
+    "internally_resolvable": true,
+    "should_escalate": false,
+    "hypothesis_class": "operational",
+    "resolved_internally": true,
+    "reason": "terminal fault PRINTER_HW_FAULT with OPEN hardware ticket TKT81120 unresolved for 120d - the aggregator caused the inactivity",
+    "requirements_satisfied": 7,
+    "requirements_total": 10,
+    "linkage_hops": 6,
+    "linkage_path": [
+      "txn_store[mid=MID4001]  (direct)",
+      "txn_store.entity_id -> kyc_store[ENT7001]  (1 hop)",
+      "asset_store reverse-scan on assigned_mid -> serial DEV157888",
+      "serial DEV157888 -> telemetry_store  (2 hops, no MID in that store)",
+      "merchant phone -> ticket_store reverse-scan -> TKT81120",
+      "settlement_store reverse-scan on mid -> account ...1651"
+    ]
+  },
+  {
+    "case_id": "C002",
+    "flag_type": "FLAG_TID_INACTIVITY",
+    "scenario": "broken_terminal_open_ticket",
+    "internally_resolvable": true,
+    "should_escalate": false,
+    "hypothesis_class": "operational",
+    "resolved_internally": true,
+    "reason": "terminal fault PRINTER_HW_FAULT with OPEN hardware ticket TKT29958 unresolved for 140d - the aggregator caused the inactivity",
+    "requirements_satisfied": 7,
+    "requirements_total": 10,
+    "linkage_hops": 6,
+    "linkage_path": [
+      "txn_store[mid=MID4002]  (direct)",
+      "txn_store.entity_id -> kyc_store[ENT7002]  (1 hop)",
+      "asset_store reverse-scan on assigned_mid -> serial DEV439051",
+      "serial DEV439051 -> telemetry_store  (2 hops, no MID in that store)",
+      "merchant phone -> ticket_store reverse-scan -> TKT29958",
+      "settlement_store reverse-scan on mid -> account ...3166"
+    ]
+  },
+  {
+    "case_id": "C003",
+    "flag_type": "FLAG_TID_INACTIVITY",
+    "scenario": "sim_deactivated",
+    "internally_resolvable": true,
+    "should_escalate": false,
+    "hypothesis_class": "operational",
+    "resolved_internally": true,
+    "reason": "device deregistered from network (SIM_DEREGISTERED) - not merchant dormancy",
+    "requirements_satisfied": 6,
+    "requirements_total": 10,
+    "linkage_hops": 5,
+    "linkage_path": [
+      "txn_store[mid=MID4003]  (direct)",
+      "txn_store.entity_id -> kyc_store[ENT7003]  (1 hop)",
+      "asset_store reverse-scan on assigned_mid -> serial DEV461838",
+      "serial DEV461838 -> telemetry_store  (2 hops, no MID in that store)",
+      "settlement_store reverse-scan on mid -> account ...3127"
+    ]
+  },
+  {
+    "case_id": "C004",
+    "flag_type": "FLAG_TID_INACTIVITY",
+    "scenario": "sim_deactivated",
+    "internally_resolvable": true,
+    "should_escalate": false,
+    "hypothesis_class": "operational",
+    "resolved_internally": true,
+    "reason": "device deregistered from network (SIM_DEREGISTERED) - not merchant dormancy",
+    "requirements_satisfied": 6,
+    "requirements_total": 10,
+    "linkage_hops": 6,
+    "linkage_path": [
+      "txn_store[mid=MID4004]  (direct)",
+      "txn_store.entity_id -> kyc_store[ENT7004]  (1 hop)",
+      "asset_store reverse-scan on assigned_mid -> serial DEV128143",
+      "serial DEV128143 -> telemetry_store  (2 hops, no MID in that store)",
+      "settlement_store reverse-scan on mid -> account ...9210",
+      "prior_case_store reverse-scan on mid -> 1 case(s)"
+    ]
+  },
+  {
+    "case_id": "C005",
+    "flag_type": "FLAG_TID_INACTIVITY",
+    "scenario": "merchant_moved_to_upi",
+    "internally_resolvable": true,
+    "should_escalate": false,
+    "hypothesis_class": "operational",
+    "resolved_internally": true,
+    "reason": "merchant still transacting on another channel on the same MID",
+    "requirements_satisfied": 6,
+    "requirements_total": 10,
+    "linkage_hops": 5,
+    "linkage_path": [
+      "txn_store[mid=MID4005]  (direct)",
+      "txn_store.entity_id -> kyc_store[ENT7005]  (1 hop)",
+      "asset_store reverse-scan on assigned_mid -> serial DEV133877",
+      "serial DEV133877 -> telemetry_store  (2 hops, no MID in that store)",
+      "settlement_store reverse-scan on mid -> account ...3288"
+    ]
+  },
+  {
+    "case_id": "C006",
+    "flag_type": "FLAG_TID_INACTIVITY",
+    "scenario": "merchant_moved_to_upi",
+    "internally_resolvable": true,
+    "should_escalate": false,
+    "hypothesis_class": "operational",
+    "resolved_internally": true,
+    "reason": "merchant still transacting on another channel on the same MID",
+    "requirements_satisfied": 6,
+    "requirements_total": 10,
+    "linkage_hops": 5,
+    "linkage_path": [
+      "txn_store[mid=MID4006]  (direct)",
+      "txn_store.entity_id -> kyc_store[ENT7006]  (1 hop)",
+      "asset_store reverse-scan on assigned_mid -> serial DEV173833",
+      "serial DEV173833 -> telemetry_store  (2 hops, no MID in that store)",
+      "settlement_store reverse-scan on mid -> account ...1487"
+    ]
+  },
+  {
+    "case_id": "C007",
+    "flag_type": "FLAG_TID_INACTIVITY",
+    "scenario": "genuinely_dormant",
+    "internally_resolvable": false,
+    "should_escalate": false,
+    "hypothesis_class": "operational",
+    "resolved_internally": false,
+    "reason": "device healthy, no fault ticket, no other active channel",
+    "requirements_satisfied": 6,
+    "requirements_total": 10,
+    "linkage_hops": 5,
+    "linkage_path": [
+      "txn_store[mid=MID4007]  (direct)",
+      "txn_store.entity_id -> kyc_store[ENT7007]  (1 hop)",
+      "asset_store reverse-scan on assigned_mid -> serial DEV133320",
+      "serial DEV133320 -> telemetry_store  (2 hops, no MID in that store)",
+      "settlement_store reverse-scan on mid -> account ...7272"
+    ]
+  },
+  {
+    "case_id": "C008",
+    "flag_type": "FLAG_TID_INACTIVITY",
+    "scenario": "genuinely_dormant",
+    "internally_resolvable": false,
+    "should_escalate": false,
+    "hypothesis_class": "operational",
+    "resolved_internally": false,
+    "reason": "device healthy, no fault ticket, no other active channel",
+    "requirements_satisfied": 6,
+    "requirements_total": 10,
+    "linkage_hops": 5,
+    "linkage_path": [
+      "txn_store[mid=MID4008]  (direct)",
+      "txn_store.entity_id -> kyc_store[ENT7008]  (1 hop)",
+      "asset_store reverse-scan on assigned_mid -> serial DEV262074",
+      "serial DEV262074 -> telemetry_store  (2 hops, no MID in that store)",
+      "settlement_store reverse-scan on mid -> account ...8831"
+    ]
+  },
+  {
+    "case_id": "C009",
+    "flag_type": "FLAG_KYC_DISCREPANCY",
+    "scenario": "suffix_abbreviation",
+    "internally_resolvable": true,
+    "should_escalate": false,
+    "hypothesis_class": "operational",
+    "resolved_internally": true,
+    "reason": "penny-drop name 'Reddy Enterprises Private Limited' matches legal name after suffix/format normalisation",
+    "requirements_satisfied": 3,
+    "requirements_total": 6,
+    "linkage_hops": 4,
+    "linkage_path": [
+      "txn_store[mid=MID4009]  (direct)",
+      "txn_store.entity_id -> kyc_store[ENT7009]  (1 hop)",
+      "settlement_store reverse-scan on mid -> account ...8181",
+      "prior_case_store reverse-scan on mid -> 1 case(s)"
+    ]
+  },
+  {
+    "case_id": "C010",
+    "flag_type": "FLAG_KYC_DISCREPANCY",
+    "scenario": "suffix_abbreviation",
+    "internally_resolvable": true,
+    "should_escalate": false,
+    "hypothesis_class": "operational",
+    "resolved_internally": true,
+    "reason": "penny-drop name 'Rao Systems Private Limited' matches legal name after suffix/format normalisation",
+    "requirements_satisfied": 3,
+    "requirements_total": 6,
+    "linkage_hops": 3,
+    "linkage_path": [
+      "txn_store[mid=MID4010]  (direct)",
+      "txn_store.entity_id -> kyc_store[ENT7010]  (1 hop)",
+      "settlement_store reverse-scan on mid -> account ...2027"
+    ]
+  },
+  {
+    "case_id": "C011",
+    "flag_type": "FLAG_KYC_DISCREPANCY",
+    "scenario": "bank_field_truncation",
+    "internally_resolvable": true,
+    "should_escalate": false,
+    "hypothesis_class": "operational",
+    "resolved_internally": true,
+    "reason": "penny-drop name 'Patel Systems Private Limited' matches legal name after suffix/format normalisation",
+    "requirements_satisfied": 3,
+    "requirements_total": 6,
+    "linkage_hops": 4,
+    "linkage_path": [
+      "txn_store[mid=MID4011]  (direct)",
+      "txn_store.entity_id -> kyc_store[ENT7011]  (1 hop)",
+      "settlement_store reverse-scan on mid -> account ...0066",
+      "prior_case_store reverse-scan on mid -> 1 case(s)"
+    ]
+  },
+  {
+    "case_id": "C012",
+    "flag_type": "FLAG_KYC_DISCREPANCY",
+    "scenario": "bank_field_truncation",
+    "internally_resolvable": true,
+    "should_escalate": false,
+    "hypothesis_class": "operational",
+    "resolved_internally": true,
+    "reason": "penny-drop name 'Desai Enterprises Private Limited' matches legal name after suffix/format normalisation",
+    "requirements_satisfied": 3,
+    "requirements_total": 6,
+    "linkage_hops": 3,
+    "linkage_path": [
+      "txn_store[mid=MID4012]  (direct)",
+      "txn_store.entity_id -> kyc_store[ENT7012]  (1 hop)",
+      "settlement_store reverse-scan on mid -> account ...6410"
+    ]
+  },
+  {
+    "case_id": "C013",
+    "flag_type": "FLAG_KYC_DISCREPANCY",
+    "scenario": "prior_name_change",
+    "internally_resolvable": true,
+    "should_escalate": false,
+    "hypothesis_class": "operational",
+    "resolved_internally": true,
+    "reason": "MCA record shows a name change explaining the variant name",
+    "requirements_satisfied": 3,
+    "requirements_total": 6,
+    "linkage_hops": 3,
+    "linkage_path": [
+      "txn_store[mid=MID4013]  (direct)",
+      "txn_store.entity_id -> kyc_store[ENT7013]  (1 hop)",
+      "settlement_store reverse-scan on mid -> account ...6538"
+    ]
+  },
+  {
+    "case_id": "C014",
+    "flag_type": "FLAG_KYC_DISCREPANCY",
+    "scenario": "prior_name_change",
+    "internally_resolvable": true,
+    "should_escalate": false,
+    "hypothesis_class": "operational",
+    "resolved_internally": true,
+    "reason": "MCA record shows a name change explaining the variant name",
+    "requirements_satisfied": 3,
+    "requirements_total": 6,
+    "linkage_hops": 4,
+    "linkage_path": [
+      "txn_store[mid=MID4014]  (direct)",
+      "txn_store.entity_id -> kyc_store[ENT7014]  (1 hop)",
+      "settlement_store reverse-scan on mid -> account ...1028",
+      "prior_case_store reverse-scan on mid -> 1 case(s)"
+    ]
+  },
+  {
+    "case_id": "C015",
+    "flag_type": "FLAG_KYC_DISCREPANCY",
+    "scenario": "different_entity",
+    "internally_resolvable": false,
+    "should_escalate": false,
+    "hypothesis_class": "operational",
+    "resolved_internally": false,
+    "reason": "penny-drop name differs from legal name beyond formatting",
+    "requirements_satisfied": 3,
+    "requirements_total": 6,
+    "linkage_hops": 3,
+    "linkage_path": [
+      "txn_store[mid=MID4015]  (direct)",
+      "txn_store.entity_id -> kyc_store[ENT7015]  (1 hop)",
+      "settlement_store reverse-scan on mid -> account ...2713"
+    ]
+  },
+  {
+    "case_id": "C016",
+    "flag_type": "FLAG_KYC_DISCREPANCY",
+    "scenario": "different_entity",
+    "internally_resolvable": false,
+    "should_escalate": false,
+    "hypothesis_class": "operational",
+    "resolved_internally": false,
+    "reason": "penny-drop name differs from legal name beyond formatting",
+    "requirements_satisfied": 3,
+    "requirements_total": 6,
+    "linkage_hops": 3,
+    "linkage_path": [
+      "txn_store[mid=MID4016]  (direct)",
+      "txn_store.entity_id -> kyc_store[ENT7016]  (1 hop)",
+      "settlement_store reverse-scan on mid -> account ...8721"
+    ]
+  },
+  {
+    "case_id": "C017",
+    "flag_type": "FLAG_VOLUME_SPIKE",
+    "scenario": "announced_sale",
+    "internally_resolvable": true,
+    "should_escalate": false,
+    "hypothesis_class": "operational",
+    "resolved_internally": true,
+    "reason": "merchant notified support of a sale in ticket TKT77931",
+    "requirements_satisfied": 3,
+    "requirements_total": 6,
+    "linkage_hops": 5,
+    "linkage_path": [
+      "txn_store[mid=MID4017]  (direct)",
+      "txn_store.entity_id -> kyc_store[ENT7017]  (1 hop)",
+      "merchant email -> ticket_store reverse-scan -> TKT77931",
+      "settlement_store reverse-scan on mid -> account ...2341",
+      "prior_case_store reverse-scan on mid -> 1 case(s)"
+    ]
+  },
+  {
+    "case_id": "C018",
+    "flag_type": "FLAG_VOLUME_SPIKE",
+    "scenario": "announced_sale",
+    "internally_resolvable": true,
+    "should_escalate": false,
+    "hypothesis_class": "operational",
+    "resolved_internally": true,
+    "reason": "merchant notified support of a sale in ticket TKT61174",
+    "requirements_satisfied": 3,
+    "requirements_total": 6,
+    "linkage_hops": 4,
+    "linkage_path": [
+      "txn_store[mid=MID4018]  (direct)",
+      "txn_store.entity_id -> kyc_store[ENT7018]  (1 hop)",
+      "merchant email -> ticket_store reverse-scan -> TKT61174",
+      "settlement_store reverse-scan on mid -> account ...5387"
+    ]
+  },
+  {
+    "case_id": "C019",
+    "flag_type": "FLAG_VOLUME_SPIKE",
+    "scenario": "settlement_backlog",
+    "internally_resolvable": true,
+    "should_escalate": false,
+    "hypothesis_class": "operational",
+    "resolved_internally": true,
+    "reason": "platform capture incident batched transactions - we caused the spike",
+    "requirements_satisfied": 1,
+    "requirements_total": 6,
+    "linkage_hops": 3,
+    "linkage_path": [
+      "txn_store[mid=MID4019]  (direct)",
+      "txn_store.entity_id -> kyc_store[ENT7019]  (1 hop)",
+      "settlement_store reverse-scan on mid -> account ...0576"
+    ]
+  },
+  {
+    "case_id": "C020",
+    "flag_type": "FLAG_VOLUME_SPIKE",
+    "scenario": "settlement_backlog",
+    "internally_resolvable": true,
+    "should_escalate": false,
+    "hypothesis_class": "operational",
+    "resolved_internally": true,
+    "reason": "platform capture incident batched transactions - we caused the spike",
+    "requirements_satisfied": 1,
+    "requirements_total": 6,
+    "linkage_hops": 3,
+    "linkage_path": [
+      "txn_store[mid=MID4020]  (direct)",
+      "txn_store.entity_id -> kyc_store[ENT7020]  (1 hop)",
+      "settlement_store reverse-scan on mid -> account ...4905"
+    ]
+  },
+  {
+    "case_id": "C021",
+    "flag_type": "FLAG_VOLUME_SPIKE",
+    "scenario": "new_integration",
+    "internally_resolvable": true,
+    "should_escalate": false,
+    "hypothesis_class": "operational",
+    "resolved_internally": true,
+    "reason": "new integration activated 1d before the spike",
+    "requirements_satisfied": 1,
+    "requirements_total": 6,
+    "linkage_hops": 3,
+    "linkage_path": [
+      "txn_store[mid=MID4021]  (direct)",
+      "txn_store.entity_id -> kyc_store[ENT7021]  (1 hop)",
+      "settlement_store reverse-scan on mid -> account ...1680"
+    ]
+  },
+  {
+    "case_id": "C022",
+    "flag_type": "FLAG_VOLUME_SPIKE",
+    "scenario": "new_integration",
+    "internally_resolvable": true,
+    "should_escalate": false,
+    "hypothesis_class": "operational",
+    "resolved_internally": true,
+    "reason": "new integration activated 3d before the spike",
+    "requirements_satisfied": 1,
+    "requirements_total": 6,
+    "linkage_hops": 3,
+    "linkage_path": [
+      "txn_store[mid=MID4022]  (direct)",
+      "txn_store.entity_id -> kyc_store[ENT7022]  (1 hop)",
+      "settlement_store reverse-scan on mid -> account ...4380"
+    ]
+  },
+  {
+    "case_id": "C023",
+    "flag_type": "FLAG_VOLUME_SPIKE",
+    "scenario": "card_testing",
+    "internally_resolvable": false,
+    "should_escalate": true,
+    "hypothesis_class": "operational",
+    "resolved_internally": false,
+    "reason": "high declines / BIN concentration - card testing signature, escalate",
+    "requirements_satisfied": 1,
+    "requirements_total": 6,
+    "linkage_hops": 4,
+    "linkage_path": [
+      "txn_store[mid=MID4023]  (direct)",
+      "txn_store.entity_id -> kyc_store[ENT7023]  (1 hop)",
+      "settlement_store reverse-scan on mid -> account ...9472",
+      "prior_case_store reverse-scan on mid -> 1 case(s)"
+    ]
+  },
+  {
+    "case_id": "C024",
+    "flag_type": "FLAG_VOLUME_SPIKE",
+    "scenario": "card_testing",
+    "internally_resolvable": false,
+    "should_escalate": true,
+    "hypothesis_class": "operational",
+    "resolved_internally": false,
+    "reason": "high declines / BIN concentration - card testing signature, escalate",
+    "requirements_satisfied": 1,
+    "requirements_total": 6,
+    "linkage_hops": 3,
+    "linkage_path": [
+      "txn_store[mid=MID4024]  (direct)",
+      "txn_store.entity_id -> kyc_store[ENT7024]  (1 hop)",
+      "settlement_store reverse-scan on mid -> account ...5232"
+    ]
+  },
+  {
+    "case_id": "C025",
+    "flag_type": "FLAG_MCC_MISMATCH",
+    "scenario": "descriptor_set_by_system",
+    "internally_resolvable": true,
+    "should_escalate": false,
+    "hypothesis_class": "operational",
+    "resolved_internally": true,
+    "reason": "descriptor was rewritten by an internal tool, not the merchant",
+    "requirements_satisfied": 2,
+    "requirements_total": 6,
+    "linkage_hops": 3,
+    "linkage_path": [
+      "txn_store[mid=MID4025]  (direct)",
+      "txn_store.entity_id -> kyc_store[ENT7025]  (1 hop)",
+      "settlement_store reverse-scan on mid -> account ...5404"
+    ]
+  },
+  {
+    "case_id": "C026",
+    "flag_type": "FLAG_MCC_MISMATCH",
+    "scenario": "descriptor_set_by_system",
+    "internally_resolvable": true,
+    "should_escalate": false,
+    "hypothesis_class": "operational",
+    "resolved_internally": true,
+    "reason": "descriptor was rewritten by an internal tool, not the merchant",
+    "requirements_satisfied": 2,
+    "requirements_total": 6,
+    "linkage_hops": 3,
+    "linkage_path": [
+      "txn_store[mid=MID4026]  (direct)",
+      "txn_store.entity_id -> kyc_store[ENT7026]  (1 hop)",
+      "settlement_store reverse-scan on mid -> account ...3254"
+    ]
+  },
+  {
+    "case_id": "C027",
+    "flag_type": "FLAG_MCC_MISMATCH",
+    "scenario": "volume_moved_between_mids",
+    "internally_resolvable": true,
+    "should_escalate": false,
+    "hypothesis_class": "operational",
+    "resolved_internally": true,
+    "reason": "merchant holds linked MID MID4027B carrying the matching MCC",
+    "requirements_satisfied": 2,
+    "requirements_total": 6,
+    "linkage_hops": 3,
+    "linkage_path": [
+      "txn_store[mid=MID4027]  (direct)",
+      "txn_store.entity_id -> kyc_store[ENT7027]  (1 hop)",
+      "settlement_store reverse-scan on mid -> account ...6724"
+    ]
+  },
+  {
+    "case_id": "C028",
+    "flag_type": "FLAG_MCC_MISMATCH",
+    "scenario": "volume_moved_between_mids",
+    "internally_resolvable": true,
+    "should_escalate": false,
+    "hypothesis_class": "operational",
+    "resolved_internally": true,
+    "reason": "merchant holds linked MID MID4028B carrying the matching MCC",
+    "requirements_satisfied": 2,
+    "requirements_total": 6,
+    "linkage_hops": 3,
+    "linkage_path": [
+      "txn_store[mid=MID4028]  (direct)",
+      "txn_store.entity_id -> kyc_store[ENT7028]  (1 hop)",
+      "settlement_store reverse-scan on mid -> account ...6877"
+    ]
+  },
+  {
+    "case_id": "C029",
+    "flag_type": "FLAG_MCC_MISMATCH",
+    "scenario": "genuine_category_drift",
+    "internally_resolvable": false,
+    "should_escalate": false,
+    "hypothesis_class": "operational",
+    "resolved_internally": false,
+    "reason": "no internal record explains the category divergence",
+    "requirements_satisfied": 3,
+    "requirements_total": 6,
+    "linkage_hops": 4,
+    "linkage_path": [
+      "txn_store[mid=MID4029]  (direct)",
+      "txn_store.entity_id -> kyc_store[ENT7029]  (1 hop)",
+      "merchant email -> ticket_store reverse-scan -> TKT75003",
+      "settlement_store reverse-scan on mid -> account ...5488"
+    ]
+  },
+  {
+    "case_id": "C030",
+    "flag_type": "FLAG_MCC_MISMATCH",
+    "scenario": "genuine_category_drift",
+    "internally_resolvable": false,
+    "should_escalate": false,
+    "hypothesis_class": "operational",
+    "resolved_internally": false,
+    "reason": "no internal record explains the category divergence",
+    "requirements_satisfied": 3,
+    "requirements_total": 6,
+    "linkage_hops": 4,
+    "linkage_path": [
+      "txn_store[mid=MID4030]  (direct)",
+      "txn_store.entity_id -> kyc_store[ENT7030]  (1 hop)",
+      "merchant email -> ticket_store reverse-scan -> TKT56598",
+      "settlement_store reverse-scan on mid -> account ...5684"
+    ]
+  },
+  {
+    "case_id": "C031",
+    "flag_type": "FLAG_HIGH_REFUND",
+    "scenario": "unrecognisable_descriptor",
+    "internally_resolvable": true,
+    "should_escalate": false,
+    "hypothesis_class": "operational",
+    "resolved_internally": true,
+    "reason": "descriptor not recognisable as the merchant brand - drives 'unrecognised charge' disputes",
+    "requirements_satisfied": 2,
+    "requirements_total": 6,
+    "linkage_hops": 4,
+    "linkage_path": [
+      "txn_store[mid=MID4031]  (direct)",
+      "txn_store.entity_id -> kyc_store[ENT7031]  (1 hop)",
+      "settlement_store reverse-scan on mid -> account ...6968",
+      "prior_case_store reverse-scan on mid -> 1 case(s)"
+    ]
+  },
+  {
+    "case_id": "C032",
+    "flag_type": "FLAG_HIGH_REFUND",
+    "scenario": "unrecognisable_descriptor",
+    "internally_resolvable": true,
+    "should_escalate": false,
+    "hypothesis_class": "operational",
+    "resolved_internally": true,
+    "reason": "descriptor not recognisable as the merchant brand - drives 'unrecognised charge' disputes",
+    "requirements_satisfied": 2,
+    "requirements_total": 6,
+    "linkage_hops": 3,
+    "linkage_path": [
+      "txn_store[mid=MID4032]  (direct)",
+      "txn_store.entity_id -> kyc_store[ENT7032]  (1 hop)",
+      "settlement_store reverse-scan on mid -> account ...5266"
+    ]
+  },
+  {
+    "case_id": "C033",
+    "flag_type": "FLAG_HIGH_REFUND",
+    "scenario": "platform_duplicate_charges",
+    "internally_resolvable": true,
+    "should_escalate": false,
+    "hypothesis_class": "operational",
+    "resolved_internally": true,
+    "reason": "platform double-submit incident generated the duplicate-charge disputes",
+    "requirements_satisfied": 2,
+    "requirements_total": 6,
+    "linkage_hops": 4,
+    "linkage_path": [
+      "txn_store[mid=MID4033]  (direct)",
+      "txn_store.entity_id -> kyc_store[ENT7033]  (1 hop)",
+      "settlement_store reverse-scan on mid -> account ...8177",
+      "prior_case_store reverse-scan on mid -> 1 case(s)"
+    ]
+  },
+  {
+    "case_id": "C034",
+    "flag_type": "FLAG_HIGH_REFUND",
+    "scenario": "platform_duplicate_charges",
+    "internally_resolvable": true,
+    "should_escalate": false,
+    "hypothesis_class": "operational",
+    "resolved_internally": true,
+    "reason": "platform double-submit incident generated the duplicate-charge disputes",
+    "requirements_satisfied": 2,
+    "requirements_total": 6,
+    "linkage_hops": 3,
+    "linkage_path": [
+      "txn_store[mid=MID4034]  (direct)",
+      "txn_store.entity_id -> kyc_store[ENT7034]  (1 hop)",
+      "settlement_store reverse-scan on mid -> account ...7732"
+    ]
+  },
+  {
+    "case_id": "C035",
+    "flag_type": "FLAG_HIGH_REFUND",
+    "scenario": "delivery_failure",
+    "internally_resolvable": false,
+    "should_escalate": false,
+    "hypothesis_class": "operational",
+    "resolved_internally": false,
+    "reason": "dispute reason codes point outward; merchant evidence required",
+    "requirements_satisfied": 2,
+    "requirements_total": 6,
+    "linkage_hops": 3,
+    "linkage_path": [
+      "txn_store[mid=MID4035]  (direct)",
+      "txn_store.entity_id -> kyc_store[ENT7035]  (1 hop)",
+      "settlement_store reverse-scan on mid -> account ...8610"
+    ]
+  },
+  {
+    "case_id": "C036",
+    "flag_type": "FLAG_HIGH_REFUND",
+    "scenario": "delivery_failure",
+    "internally_resolvable": false,
+    "should_escalate": false,
+    "hypothesis_class": "operational",
+    "resolved_internally": false,
+    "reason": "dispute reason codes point outward; merchant evidence required",
+    "requirements_satisfied": 2,
+    "requirements_total": 6,
+    "linkage_hops": 3,
+    "linkage_path": [
+      "txn_store[mid=MID4036]  (direct)",
+      "txn_store.entity_id -> kyc_store[ENT7036]  (1 hop)",
+      "settlement_store reverse-scan on mid -> account ...2386"
+    ]
+  },
+  {
+    "case_id": "C037",
+    "flag_type": "FLAG_THIRD_PARTY_BENEFICIARY",
+    "scenario": "formatting_variation",
+    "internally_resolvable": true,
+    "should_escalate": false,
+    "hypothesis_class": "operational",
+    "resolved_internally": true,
+    "reason": "beneficiary name matches the legal entity after normalisation",
+    "requirements_satisfied": 3,
+    "requirements_total": 7,
+    "linkage_hops": 3,
+    "linkage_path": [
+      "txn_store[mid=MID4037]  (direct)",
+      "txn_store.entity_id -> kyc_store[ENT7037]  (1 hop)",
+      "settlement_store reverse-scan on mid -> account ...1512"
+    ]
+  },
+  {
+    "case_id": "C038",
+    "flag_type": "FLAG_THIRD_PARTY_BENEFICIARY",
+    "scenario": "formatting_variation",
+    "internally_resolvable": true,
+    "should_escalate": false,
+    "hypothesis_class": "operational",
+    "resolved_internally": true,
+    "reason": "beneficiary name matches the legal entity after normalisation",
+    "requirements_satisfied": 3,
+    "requirements_total": 7,
+    "linkage_hops": 4,
+    "linkage_path": [
+      "txn_store[mid=MID4038]  (direct)",
+      "txn_store.entity_id -> kyc_store[ENT7038]  (1 hop)",
+      "settlement_store reverse-scan on mid -> account ...7603",
+      "prior_case_store reverse-scan on mid -> 1 case(s)"
+    ]
+  },
+  {
+    "case_id": "C039",
+    "flag_type": "FLAG_THIRD_PARTY_BENEFICIARY",
+    "scenario": "partner_personal_account",
+    "internally_resolvable": false,
+    "should_escalate": false,
+    "hypothesis_class": "contractual",
+    "resolved_internally": false,
+    "reason": "beneficiary is not the legal entity - contractual question, documents required",
+    "requirements_satisfied": 3,
+    "requirements_total": 7,
+    "linkage_hops": 3,
+    "linkage_path": [
+      "txn_store[mid=MID4039]  (direct)",
+      "txn_store.entity_id -> kyc_store[ENT7039]  (1 hop)",
+      "settlement_store reverse-scan on mid -> account ...7333"
+    ]
+  },
+  {
+    "case_id": "C040",
+    "flag_type": "FLAG_THIRD_PARTY_BENEFICIARY",
+    "scenario": "partner_personal_account",
+    "internally_resolvable": false,
+    "should_escalate": false,
+    "hypothesis_class": "contractual",
+    "resolved_internally": false,
+    "reason": "beneficiary is not the legal entity - contractual question, documents required",
+    "requirements_satisfied": 3,
+    "requirements_total": 7,
+    "linkage_hops": 3,
+    "linkage_path": [
+      "txn_store[mid=MID4040]  (direct)",
+      "txn_store.entity_id -> kyc_store[ENT7040]  (1 hop)",
+      "settlement_store reverse-scan on mid -> account ...9038"
+    ]
+  },
+  {
+    "case_id": "C041",
+    "flag_type": "FLAG_THIRD_PARTY_BENEFICIARY",
+    "scenario": "unrelated_third_party",
+    "internally_resolvable": false,
+    "should_escalate": true,
+    "hypothesis_class": "contractual",
+    "resolved_internally": false,
+    "reason": "beneficiary is not the legal entity - contractual question, documents required",
+    "requirements_satisfied": 3,
+    "requirements_total": 7,
+    "linkage_hops": 3,
+    "linkage_path": [
+      "txn_store[mid=MID4041]  (direct)",
+      "txn_store.entity_id -> kyc_store[ENT7041]  (1 hop)",
+      "settlement_store reverse-scan on mid -> account ...9983"
+    ]
+  },
+  {
+    "case_id": "C042",
+    "flag_type": "FLAG_THIRD_PARTY_BENEFICIARY",
+    "scenario": "unrelated_third_party",
+    "internally_resolvable": false,
+    "should_escalate": true,
+    "hypothesis_class": "contractual",
+    "resolved_internally": false,
+    "reason": "beneficiary is not the legal entity - contractual question, documents required",
+    "requirements_satisfied": 3,
+    "requirements_total": 7,
+    "linkage_hops": 3,
+    "linkage_path": [
+      "txn_store[mid=MID4042]  (direct)",
+      "txn_store.entity_id -> kyc_store[ENT7042]  (1 hop)",
+      "settlement_store reverse-scan on mid -> account ...5685"
+    ]
+  },
+  {
+    "case_id": "C043",
+    "flag_type": "FLAG_CPV_FAILURE",
+    "scenario": "courier_delivered_here",
+    "internally_resolvable": true,
+    "should_escalate": false,
+    "hypothesis_class": "operational",
+    "resolved_internally": true,
+    "reason": "a device was couriered to this address and signed for - premises exist and are findable",
+    "requirements_satisfied": 3,
+    "requirements_total": 6,
+    "linkage_hops": 5,
+    "linkage_path": [
+      "txn_store[mid=MID4043]  (direct)",
+      "txn_store.entity_id -> kyc_store[ENT7043]  (1 hop)",
+      "asset_store reverse-scan on assigned_mid -> serial DEV236012",
+      "settlement_store reverse-scan on mid -> account ...3265",
+      "kyc.registered_address -> cpv_store reverse-scan -> CPV19421  (3 hops, joined on an address string)"
+    ]
+  },
+  {
+    "case_id": "C044",
+    "flag_type": "FLAG_CPV_FAILURE",
+    "scenario": "courier_delivered_here",
+    "internally_resolvable": true,
+    "should_escalate": false,
+    "hypothesis_class": "operational",
+    "resolved_internally": true,
+    "reason": "a device was couriered to this address and signed for - premises exist and are findable",
+    "requirements_satisfied": 3,
+    "requirements_total": 6,
+    "linkage_hops": 5,
+    "linkage_path": [
+      "txn_store[mid=MID4044]  (direct)",
+      "txn_store.entity_id -> kyc_store[ENT7044]  (1 hop)",
+      "asset_store reverse-scan on assigned_mid -> serial DEV308411",
+      "settlement_store reverse-scan on mid -> account ...7035",
+      "kyc.registered_address -> cpv_store reverse-scan -> CPV92004  (3 hops, joined on an address string)"
+    ]
+  },
+  {
+    "case_id": "C045",
+    "flag_type": "FLAG_CPV_FAILURE",
+    "scenario": "agent_wrong_locality",
+    "internally_resolvable": true,
+    "should_escalate": false,
+    "hypothesis_class": "operational",
+    "resolved_internally": true,
+    "reason": "agent GPS was 3.6km from the onboarding coordinates - wrong locality, re-route the visit",
+    "requirements_satisfied": 3,
+    "requirements_total": 6,
+    "linkage_hops": 6,
+    "linkage_path": [
+      "txn_store[mid=MID4045]  (direct)",
+      "txn_store.entity_id -> kyc_store[ENT7045]  (1 hop)",
+      "asset_store reverse-scan on assigned_mid -> serial DEV512491",
+      "settlement_store reverse-scan on mid -> account ...8415",
+      "kyc.registered_address -> cpv_store reverse-scan -> CPV12428  (3 hops, joined on an address string)",
+      "prior_case_store reverse-scan on mid -> 1 case(s)"
+    ]
+  },
+  {
+    "case_id": "C046",
+    "flag_type": "FLAG_CPV_FAILURE",
+    "scenario": "agent_wrong_locality",
+    "internally_resolvable": true,
+    "should_escalate": false,
+    "hypothesis_class": "operational",
+    "resolved_internally": true,
+    "reason": "agent GPS was 4.5km from the onboarding coordinates - wrong locality, re-route the visit",
+    "requirements_satisfied": 3,
+    "requirements_total": 6,
+    "linkage_hops": 5,
+    "linkage_path": [
+      "txn_store[mid=MID4046]  (direct)",
+      "txn_store.entity_id -> kyc_store[ENT7046]  (1 hop)",
+      "asset_store reverse-scan on assigned_mid -> serial DEV462005",
+      "settlement_store reverse-scan on mid -> account ...6075",
+      "kyc.registered_address -> cpv_store reverse-scan -> CPV91663  (3 hops, joined on an address string)"
+    ]
+  },
+  {
+    "case_id": "C047",
+    "flag_type": "FLAG_CPV_FAILURE",
+    "scenario": "informal_addressing",
+    "internally_resolvable": false,
+    "should_escalate": false,
+    "hypothesis_class": "operational",
+    "resolved_internally": false,
+    "reason": "no internal record places the merchant at the address",
+    "requirements_satisfied": 3,
+    "requirements_total": 6,
+    "linkage_hops": 6,
+    "linkage_path": [
+      "txn_store[mid=MID4047]  (direct)",
+      "txn_store.entity_id -> kyc_store[ENT7047]  (1 hop)",
+      "asset_store reverse-scan on assigned_mid -> serial DEV696194",
+      "settlement_store reverse-scan on mid -> account ...9035",
+      "kyc.registered_address -> cpv_store reverse-scan -> CPV60557  (3 hops, joined on an address string)",
+      "prior_case_store reverse-scan on mid -> 1 case(s)"
+    ]
+  },
+  {
+    "case_id": "C048",
+    "flag_type": "FLAG_CPV_FAILURE",
+    "scenario": "informal_addressing",
+    "internally_resolvable": false,
+    "should_escalate": false,
+    "hypothesis_class": "operational",
+    "resolved_internally": false,
+    "reason": "no internal record places the merchant at the address",
+    "requirements_satisfied": 3,
+    "requirements_total": 6,
+    "linkage_hops": 6,
+    "linkage_path": [
+      "txn_store[mid=MID4048]  (direct)",
+      "txn_store.entity_id -> kyc_store[ENT7048]  (1 hop)",
+      "asset_store reverse-scan on assigned_mid -> serial DEV235193",
+      "settlement_store reverse-scan on mid -> account ...4794",
+      "kyc.registered_address -> cpv_store reverse-scan -> CPV25191  (3 hops, joined on an address string)",
+      "prior_case_store reverse-scan on mid -> 1 case(s)"
+    ]
+  },
+  {
+    "case_id": "C049",
+    "flag_type": "FLAG_CPV_FAILURE",
+    "scenario": "home_based_no_signage",
+    "internally_resolvable": false,
+    "should_escalate": false,
+    "hypothesis_class": "operational",
+    "resolved_internally": false,
+    "reason": "logins and a deployed device corroborate the address, but CPV needs a completed visit - merchant must supply a landmark or time window",
+    "requirements_satisfied": 3,
+    "requirements_total": 6,
+    "linkage_hops": 6,
+    "linkage_path": [
+      "txn_store[mid=MID4049]  (direct)",
+      "txn_store.entity_id -> kyc_store[ENT7049]  (1 hop)",
+      "asset_store reverse-scan on assigned_mid -> serial DEV288410",
+      "settlement_store reverse-scan on mid -> account ...6246",
+      "kyc.registered_address -> cpv_store reverse-scan -> CPV49915  (3 hops, joined on an address string)",
+      "prior_case_store reverse-scan on mid -> 1 case(s)"
+    ]
+  },
+  {
+    "case_id": "C050",
+    "flag_type": "FLAG_CPV_FAILURE",
+    "scenario": "home_based_no_signage",
+    "internally_resolvable": false,
+    "should_escalate": false,
+    "hypothesis_class": "operational",
+    "resolved_internally": false,
+    "reason": "logins and a deployed device corroborate the address, but CPV needs a completed visit - merchant must supply a landmark or time window",
+    "requirements_satisfied": 3,
+    "requirements_total": 6,
+    "linkage_hops": 5,
+    "linkage_path": [
+      "txn_store[mid=MID4050]  (direct)",
+      "txn_store.entity_id -> kyc_store[ENT7050]  (1 hop)",
+      "asset_store reverse-scan on assigned_mid -> serial DEV785433",
+      "settlement_store reverse-scan on mid -> account ...5832",
+      "kyc.registered_address -> cpv_store reverse-scan -> CPV66614  (3 hops, joined on an address string)"
+    ]
+  }
+]

@@ -1,0 +1,51 @@
+[INTERNAL] Full terminal telemetry for the 94-day window — last successful ping, heartbeat gaps, power-on events and last card read attempt — to confirm the device was live but unused rather than dead or unplugged.
+[INTERNAL] Terminal error and decline logs for the same window, to check whether transactions were attempted and failed (SIM, network, EMV kernel, printer or battery faults) rather than never attempted.
+[INTERNAL] SIM/connectivity records for the device — data usage, SIM active/suspended status, and last network registration.
+[INTERNAL] Support ticket history for this MID/TID, especially any complaint about the device not working, paper rolls, charger, or a swap request that was never closed.
+[INTERNAL] Field service and engineer visit records for the terminal — swap, pickup, repair or repossession entries.
+[INTERNAL] Device asset record — whether the terminal is still shown as deployed to this merchant or was recovered into stock.
+[INTERNAL] Terminal rental/MDR invoice and recovery history — whether rentals kept getting debited, and whether they bounced.
+[INTERNAL] Check whether the same merchant has any other MID or TID with the aggregator that is still transacting, including QR, UPI, payment links or online collection.
+[INTERNAL] Full transaction history for the 6 months before dormancy — daily volume, ticket size, and the exact date and amount of the last card-present transaction.
+[INTERNAL] Trend check on whether volumes tapered gradually or stopped abruptly on a single date, since an abrupt stop points to a device or premises event.
+[INTERNAL] Chargeback, dispute, fraud and excessive-refund history before the stoppage, to rule out that the merchant went quiet to avoid scrutiny.
+[INTERNAL] Any earlier risk alerts, holds, warnings or transaction-laundering suspicions on this MID.
+[INTERNAL] Exact figure of funds currently on hold, the settlement cycle they belong to, and whether any reserve or rolling reserve is also held.
+[INTERNAL] Date and destination account of the last successful settlement to this merchant.
+[INTERNAL] Whether any settlement to the merchant bounced or was returned by the bank before dormancy.
+[INTERNAL] Existing KYC file — proprietor PAN, Aadhaar or other officially valid document, business proof, address proof — and the date each was collected.
+[INTERNAL] KYC due-date check under RBI periodic updation rules, since a 31-month-old account may be due for re-KYC anyway.
+[INTERNAL] Existing bank proof on file (cancelled cheque or bank letter) and the last penny-drop or account validation result.
+[INTERNAL] Existing GST registration number on file and its current status on the GST portal.
+[INTERNAL] Existing FSSAI licence on file for the restaurant and its expiry date.
+[INTERNAL] Existing Shop and Establishment or municipal trade licence on file and its expiry date.
+[INTERNAL] Re-run of name screening against sanctions, PEP, law enforcement and card network negative lists (MATCH/VMAS) for the proprietor and the business.
+[INTERNAL] Verification that the declared MCC 5812 matches the ticket sizes and transaction timing seen in the historical data, to confirm the restaurant coding was genuine.
+[INTERNAL] Onboarding file check on the registered business address, geo-coordinates captured at installation, and photos taken at the time of the merchant visit.
+[INTERNAL] Comparison of the terminal's last known location data against the registered address, to detect whether the device was moved elsewhere.
+[INTERNAL] Record of any deactivation, closure or hold request the merchant themselves sent by email, app or call centre.
+[INTERNAL] Confirmation of the current registered contact details on file — mobile, email, address — and whether recent communications were delivered or bounced.
+[ASK] A written reactivation request from the proprietor, signed, on the business letterhead, referencing the MID and TID.
+[ASK] A written explanation of why there were no card transactions for 94 days, with dates — for example temporary closure, renovation, seasonal shutdown, illness, family emergency, staff shortage, or a shift to UPI QR or another bank's machine.
+[ASK] Confirmation of whether the business is still running at the same address, and if it has moved, the new complete address.
+[ASK] Proof that the outlet is currently trading — recent dated photographs of the shopfront, signage, interior and the terminal in place, ideally geo-tagged.
+[ASK] Current premises proof — registered rent agreement, lease, or ownership document covering today's date.
+[ASK] A recent utility bill for the premises (electricity, water or property tax) not older than 3 months, showing continuous occupation.
+[ASK] Bank statements of the business current account for the last 6 to 12 months, showing whether the business kept earning through cash, UPI or another acquirer.
+[ASK] GST returns filed for the dormant period (GSTR-3B and GSTR-1), or a written declaration of nil filing with proof if turnover was actually nil.
+[ASK] Latest income tax return of the proprietor along with the computation of income for the business.
+[ASK] A valid and unexpired FSSAI licence, if the one on file has lapsed.
+[ASK] A valid and unexpired Shop and Establishment or municipal trade licence, if the one on file has lapsed.
+[ASK] Fresh KYC documents of the proprietor — PAN, Aadhaar or other officially valid document — if the file is due for periodic updation or the documents have expired.
+[ASK] A recent photograph of the proprietor and a live or video verification, to confirm the proprietor is the same person and is alive and running the business, since a proprietorship ends with the proprietor.
+[ASK] Confirmation that the settlement bank account is unchanged and still active, with a cancelled cheque or recent bank statement header carrying the account holder's name, account number and IFSC.
+[ASK] Fresh bank account details with proof, if the account has been closed, become dormant, or changed.
+[ASK] Confirmation of the current physical location and serial number of the terminal, with a photograph of the device label, so the aggregator knows the device was not sold, lost or handed to a third party.
+[ASK] A declaration that the terminal was not shared with, sub-let to, or used by any other business or person during the dormant period.
+[ASK] Disclosure of any other card acceptance arrangements the merchant now uses — other banks, aggregators, QR codes or aggregated UPI — with the provider names.
+[ASK] Confirmation of whether the nature of business, menu, or business model has changed in any way, since a change may require a different MCC.
+[ASK] Expected monthly card volume, average ticket size and highest expected ticket size going forward, so limits can be reset sensibly.
+[ASK] An undertaking that the merchant will only process genuine sales of their own restaurant business, will not process for third parties, and understands the TID may be deactivated again on prolonged inactivity.
+[ASK] Confirmation of current contact details — mobile number, email and person to deal with — for future alerts.
+[INTERNAL] A fresh merchant site visit or verification report by the aggregator's own field team or agency, confirming the outlet is open and operating at the registered address.
+[INTERNAL] Final risk sign-off record confirming the reactivation decision, the revised limits, and the release of the held settlement to the validated bank account.

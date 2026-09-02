@@ -1,0 +1,56 @@
+# Rebuild every artefact from the seed on a clean machine, then check that the
+# numbers the README claims are the numbers the code produces.
+#
+# There is no API key anywhere in this pipeline: the 16 checked-in model
+# responses are the only LLM output, and CI RESCORES them - it never re-requests
+# them.
+#
+# A green run therefore means something stronger than "the tests pass". The
+# runner is a fresh machine holding nothing but a clone of this repository - no
+# files from my computer, no generated results, no installed packages beyond
+# requirements.txt. From that starting point it regenerates the data, reruns the
+# pipeline, rescores the model responses, and arrives at every figure quoted in
+# the README. The numbers are not true only on my machine.
+
+name: verify
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  rebuild-and-verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Regenerate the 50-case store from the seed
+        run: python src/case_store.py
+
+      - name: Stage 2 entity resolution
+        run: python src/stage2_resolve.py
+
+      - name: Full pipeline run
+        run: python src/pipeline.py
+
+      - name: Rebuild the analyst queue page
+        run: python src/build_queue.py
+
+      - name: Audit the ground truth for internal consistency
+        run: python src/stage1_eval.py --audit
+
+      - name: Rescore the checked-in model responses
+        run: python src/stage1_eval.py --compare
+
+      - name: Ledger and label-blindness tests
+        run: python src/test_ledger.py
+
+      - name: Verify every README figure against the artefacts
+        run: python src/verify_claims.py

@@ -1,0 +1,354 @@
+# Ground-truth requirement sets, by flag type.
+#
+# WHAT THIS IS
+# For each risk flag a payment aggregator might raise, the complete set of
+# evidence that would clear it. Hand-built. This is the reference Stage 1 is
+# scored against, so it is the most important file in the project: a sloppy
+# ground truth makes the headline metric meaningless.
+#
+# SOURCES for each requirement set:
+#   - the coded review corpus (research/complaints/) - documents merchants
+#     actually report being asked for
+#   - RBI PA Directions 2025 - merchant due diligence, CPV, MCC allotment,
+#     third-party beneficiary scrutiny
+#   - MATCH reason codes - standard acquirer termination taxonomy
+#
+# FIELDS
+#   alert_text              what the risk system emits. Deliberately terse and
+#                           fuzzy - this is the realistic input to Stage 1.
+#   internally_satisfiable  can the aggregator settle this item from records it
+#                           already holds, without asking the merchant? Three
+#                           values: true, false, partial. This is what Stage 2
+#                           is measured on.
+#   match_keywords          used by the scorer for deterministic matching.
+#                           A predicted item matches if it contains any alias.
+#   note                    optional. Why this requirement is worded as it is,
+#                           or what evidence put it here. Read by humans only -
+#                           no code reads this field.
+#
+# REVIEW STATUS: v2 (frozen 2026-08-30), unreviewed by a domain expert.
+# v1 was the pre-run-1 set; TI7-TI10 and one TI6 alias were added after run 1,
+# which is why run 1 and run 2 numbers are not comparable. Both changes are
+# recorded inline and in the BIAS WARNING at the bottom. See also LIMITATIONS.
+
+flags:
+
+  - id: FLAG_VOLUME_SPIKE
+    label: Sudden transaction volume spike
+    alert_text: "Settlement on hold. Unusual transaction pattern observed on your account."
+    merchant_context:
+      business_type: private_limited
+      mcc_declared: "5399 - general merchandise"
+      months_active: 8
+      trigger: "7x median daily volume sustained over 4 days"
+    requirements:
+      - id: VS1
+        item: "Written explanation of the business event driving the volume increase"
+        internally_satisfiable: false
+        match_keywords: [explanation, reason for spike, business event, cause of increase, justification]
+      - id: VS2
+        item: "Evidence of the driving event - campaign creatives, ad spend receipts, marketplace listing, or press coverage"
+        internally_satisfiable: false
+        match_keywords: [campaign, marketing, advertisement, ad spend, promotion, sale event, listing]
+      - id: VS3
+        item: "Sample of underlying orders for the spike period - order IDs, invoices, customer records"
+        internally_satisfiable: partial
+        match_keywords: [sample orders, invoices, order id, customer records, transaction sample]
+        note: "Order IDs and amounts are in the aggregator's own transaction data; customer-side invoices are not."
+      - id: VS4
+        item: "Proof of fulfilment capacity - inventory records or supplier invoices consistent with the volume"
+        internally_satisfiable: false
+        match_keywords: [inventory, stock, supplier invoice, fulfilment, procurement, capacity]
+      - id: VS5
+        item: "Current refund and chargeback rate for the spike period"
+        internally_satisfiable: true
+        match_keywords: [refund rate, chargeback rate, dispute rate, return rate]
+        note: "Entirely computable from the aggregator's own data. Never ask the merchant."
+      - id: VS6
+        item: "Bank statement showing business activity consistent with the claimed event"
+        internally_satisfiable: false
+        match_keywords: [bank statement, account statement, banking records]
+
+  - id: FLAG_MCC_MISMATCH
+    label: Declared category does not match observed behaviour
+    alert_text: "Your account is under review. Transactions appear inconsistent with your registered business category."
+    merchant_context:
+      business_type: proprietorship
+      mcc_declared: "5941 - sporting goods"
+      months_active: 14
+      trigger: "ticket size distribution and merchant descriptor text inconsistent with declared MCC"
+    requirements:
+      - id: MC1
+        item: "Live website URL or product catalogue showing what is currently sold"
+        internally_satisfiable: partial
+        match_keywords: [website, catalogue, catalog, product list, url, storefront]
+        note: "A website URL was captured at onboarding by the agentic category detector; whether it is current is the open question."
+      - id: MC2
+        item: "Sample invoices from recent transactions showing goods or services actually supplied"
+        internally_satisfiable: false
+        match_keywords: [invoice, bill, sample transaction, proof of sale, receipts]
+      - id: MC3
+        item: "Volume split by product category if the merchant sells across multiple categories"
+        internally_satisfiable: false
+        match_keywords: [category split, product mix, breakdown by category, revenue split]
+      - id: MC4
+        item: "If the business model changed - written notice of the change and updated registration documents"
+        internally_satisfiable: false
+        match_keywords: [business model change, change of business, updated registration, amended]
+      - id: MC5
+        item: "Confirmation of the correct MCC and a request to re-classify the account"
+        internally_satisfiable: false
+        match_keywords: [mcc, merchant category code, reclassify, correct category]
+        note: "RBI PA Directions 2025 make correct MCC allotment the PA's obligation, not the merchant's."
+      - id: MC6
+        item: "Declared category and MCC currently on file"
+        internally_satisfiable: true
+        match_keywords: [current mcc on file, declared category, registered category, existing classification]
+
+  - id: FLAG_HIGH_REFUND
+    label: Elevated refund or chargeback rate
+    alert_text: "Settlements paused pending review of dispute levels on your account."
+    merchant_context:
+      business_type: private_limited
+      mcc_declared: "5651 - apparel"
+      months_active: 22
+      trigger: "chargeback rate 2.1% against 0.4% category median"
+    requirements:
+      - id: HR1
+        item: "Published refund and returns policy, with effective date"
+        internally_satisfiable: false
+        match_keywords: [refund policy, return policy, cancellation policy, terms]
+      - id: HR2
+        item: "Reason breakdown of recent refunds and chargebacks"
+        internally_satisfiable: partial
+        match_keywords: [refund reasons, chargeback reasons, dispute breakdown, reason codes]
+        note: "Network reason codes are in the aggregator's data; merchant-side root cause is not."
+      - id: HR3
+        item: "Proof of delivery for disputed orders - AWB, tracking, or signed POD"
+        internally_satisfiable: false
+        match_keywords: [proof of delivery, tracking, awb, shipping, pod, courier, dispatch]
+      - id: HR4
+        item: "Customer communication logs for a sample of disputed transactions"
+        internally_satisfiable: false
+        match_keywords: [customer communication, email logs, support history, correspondence]
+      - id: HR5
+        item: "Remediation plan addressing the root cause"
+        internally_satisfiable: false
+        match_keywords: [remediation, corrective action, action plan, prevention plan]
+      - id: HR6
+        item: "Historical chargeback rate trend for this account"
+        internally_satisfiable: true
+        match_keywords: [chargeback trend, historical rate, dispute history, past chargebacks]
+
+  - id: FLAG_KYC_DISCREPANCY
+    label: Document mismatch during KYC review
+    alert_text: "Additional clarification required on your KYC submission before activation can proceed."
+    merchant_context:
+      business_type: private_limited
+      mcc_declared: "7372 - software"
+      months_active: 0
+      trigger: "entity name on bank proof does not exactly match certificate of incorporation"
+    requirements:
+      - id: KD1
+        item: "Identification of the specific field that mismatched"
+        internally_satisfiable: true
+        match_keywords: [which field, specific mismatch, what discrepancy, exact field, identify mismatch]
+        note: "The aggregator knows precisely what failed. Corpus evidence shows this is frequently NOT told to the merchant."
+      - id: KD2
+        item: "Corrected officially valid document matching the registered entity name exactly"
+        internally_satisfiable: false
+        match_keywords: [ovd, officially valid document, corrected document, matching name, identity proof]
+      - id: KD3
+        item: "If the legal name changed - gazette notification or amended certificate of incorporation"
+        internally_satisfiable: false
+        match_keywords: [name change, gazette, amended certificate, incorporation certificate, deed]
+      - id: KD4
+        item: "Board resolution in the aggregator's prescribed format authorising the signatory"
+        internally_satisfiable: false
+        match_keywords: [board resolution, authorised signatory, authorisation letter, signatory proof]
+        note: "Corpus: 'board resolution in a specific format' - the format spec must be issued WITH the request, not after."
+      - id: KD5
+        item: "Consistency evidence across PAN, GST (if applicable) and bank account name"
+        internally_satisfiable: partial
+        match_keywords: [pan, gst, bank account name, name consistency, cross-check]
+      - id: KD6
+        item: "Documents already accepted in this KYC submission"
+        internally_satisfiable: true
+        match_keywords: [already submitted, documents on file, previously accepted, existing submission]
+
+  - id: FLAG_TID_INACTIVITY
+    label: POS terminal deactivated on inactivity signal
+    alert_text: "The TID has been deactivated due to no transactions for more than 3 months."
+    merchant_context:
+      business_type: proprietorship
+      mcc_declared: "5812 - restaurant"
+      months_active: 31
+      trigger: "zero card-present transactions for 94 consecutive days"
+    requirements:
+      - id: TI1
+        item: "Any open or recently closed service tickets on this terminal's hardware"
+        internally_satisfiable: true
+        match_keywords: [support ticket, service request, hardware fault, complaint raised, service history, maintenance]
+        note: "THE CRITICAL ITEM. Corpus R036: the terminal was dead and its service ticket was never closed - still open in the aggregator's own system. Asking the merchant to explain this is asking them to prove something the company already knew."
+      - id: TI2
+        item: "Terminal health, heartbeat or connectivity logs for the inactive period"
+        internally_satisfiable: true
+        match_keywords: [terminal logs, heartbeat, device health, connectivity, telemetry, uptime]
+      - id: TI3
+        item: "Merchant confirmation of physical possession and location of the device"
+        internally_satisfiable: false
+        match_keywords: [possession, device location, physical custody, where is the terminal]
+        note: "Genuine risk question - dormant terminals get resold or rented out. This one must be asked."
+      - id: TI4
+        item: "Reason for inactivity if not hardware related - seasonal closure, relocation, channel shift"
+        internally_satisfiable: false
+        match_keywords: [reason for inactivity, why no transactions, seasonal, closure, relocation]
+      - id: TI5
+        item: "Whether the merchant wants reactivation or replacement hardware"
+        internally_satisfiable: false
+        match_keywords: [reactivation, replacement, new terminal, resume service]
+      - id: TI6
+        item: "Other terminals on the same MID and their activity status"
+        internally_satisfiable: true
+        match_keywords: [other terminals, same mid, other mid, related terminals, account terminals, any other tid]
+        note: "ALIAS ADDED 2026-08-30 after run 1 (bucket b - semantically identical, worded differently). Model said 'any other MID or TID with the aggregator'; original aliases had 'same mid' but not 'other mid'. Logged because adding aliases post-hoc fits ground truth to the answer if done silently."
+      # TI7-TI10 ADDED 2026-08-30 after run 1 (bucket c - ground truth was
+      # incomplete). These are genuinely correct requirements the v1 set missed.
+      # See LOG.md and the BIAS WARNING at the bottom of this file.
+      - id: TI7
+        item: "Terminal error and decline logs - were transactions attempted and failing, rather than never attempted?"
+        internally_satisfiable: true
+        match_keywords: [error log, decline log, failed transaction, attempted, emv, terminal errors]
+        note: "Distinguishes a dead terminal from a dormant merchant. Directly decisive for the R036 case class."
+      - id: TI8
+        item: "SIM and connectivity records for the device - data usage, SIM status, last network registration"
+        internally_satisfiable: true
+        match_keywords: [sim, connectivity, network registration, data usage, gprs, signal]
+      - id: TI9
+        item: "Device asset record - still deployed to this merchant, or recovered into stock?"
+        internally_satisfiable: true
+        match_keywords: [asset record, device inventory, deployed, recovered into stock, repossessed, asset status]
+      - id: TI10
+        item: "Terminal rental and MDR invoice history - did rentals keep debiting, and did they bounce?"
+        internally_satisfiable: true
+        match_keywords: [rental, mdr invoice, billing history, rent debited, invoice history]
+
+  - id: FLAG_THIRD_PARTY_BENEFICIARY
+    label: Settlement flowing to an unrelated third party
+    alert_text: "Settlement held. Beneficiary account details require verification."
+    merchant_context:
+      business_type: partnership
+      mcc_declared: "5045 - computers and peripherals"
+      months_active: 6
+      trigger: "settlement beneficiary account name does not match merchant legal entity"
+    requirements:
+      - id: TP1
+        item: "Identity of the beneficiary and its relationship to the merchant entity"
+        internally_satisfiable: false
+        match_keywords: [beneficiary identity, relationship, who is the account holder, third party details]
+        note: "RBI PA Directions 2025 explicitly require scrutiny of settlement to a merchant on behalf of an unrelated third-party beneficiary. This is the transaction-laundering pattern."
+      - id: TP2
+        item: "Written agreement governing the arrangement"
+        internally_satisfiable: false
+        match_keywords: [agreement, contract, mou, written arrangement, legal document]
+      - id: TP3
+        item: "Whether the third party is separately onboarded and KYC'd anywhere in the network"
+        internally_satisfiable: true
+        match_keywords: [separately onboarded, existing merchant, kyc on file, network check, already registered]
+      - id: TP4
+        item: "Invoices demonstrating goods or services actually supplied by the merchant itself"
+        internally_satisfiable: false
+        match_keywords: [invoices, proof of supply, goods supplied, services rendered, who fulfils]
+      - id: TP5
+        item: "Confirmation that no sub-merchant aggregation is occurring"
+        internally_satisfiable: false
+        match_keywords: [sub-merchant, aggregation, processing for others, on behalf of, reseller]
+      - id: TP6
+        item: "If a marketplace - marketplace agreement and current seller list"
+        internally_satisfiable: false
+        match_keywords: [marketplace, seller list, platform agreement, vendors]
+      - id: TP7
+        item: "Bank account details currently on file and when they were last changed"
+        internally_satisfiable: true
+        match_keywords: [account on file, bank details, last changed, account history, change log]
+
+  - id: FLAG_CPV_FAILURE
+    label: Contact Point Verification failed - address untraceable
+    alert_text: "Your registered address could not be verified. Settlements are on hold."
+    merchant_context:
+      business_type: proprietorship
+      mcc_declared: "7311 - advertising services"
+      months_active: 3
+      trigger: "field agent reported address untraceable"
+    requirements:
+      - id: CP1
+        item: "Photographic evidence of the premises showing business signage"
+        internally_satisfiable: false
+        match_keywords: [photo, photograph, premises, signage, shop front, image of office]
+      - id: CP2
+        item: "Address proof - utility bill, rent agreement, or property tax receipt"
+        internally_satisfiable: partial
+        match_keywords: [utility bill, rent agreement, lease, property tax, electricity bill, address proof]
+      - id: CP3
+        item: "Geotagged photo or map link confirming the location"
+        internally_satisfiable: false
+        match_keywords: [geotag, gps, map link, location pin, coordinates]
+      - id: CP4
+        item: "Alternate operating address if the registered address is a registered office only"
+        internally_satisfiable: false
+        match_keywords: [alternate address, operating address, registered office, actual premises, work from home]
+        note: "Corpus R032: a merchant reported a valid registered address marked untraceable. Home-based and virtual-office businesses fail CPV routinely without being fraudulent."
+      - id: CP5
+        item: "Availability window for a re-visit by the verification agent"
+        internally_satisfiable: false
+        match_keywords: [revisit, re-verification, availability, schedule, when available]
+      - id: CP6
+        item: "The address currently on file and the agent's specific failure reason"
+        internally_satisfiable: true
+        match_keywords: [address on file, agent report, failure reason, what did the agent find, cpv report]
+
+# BIAS WARNING - read before comparing any two runs
+#
+# On 2026-08-30, after Stage 1 run 1, four requirements (TI7-TI10) were added to
+# FLAG_TID_INACTIVITY because the model surfaced them and they were genuinely
+# correct. This is legitimate ground-truth improvement, but it has a direct and
+# unavoidable consequence:
+#
+#   ADDING ITEMS THE MODEL PRODUCED MAKES THE MODEL SCORE BETTER NEXT TIME.
+#   Recall rises (it already generates these) and precision rises (more of its
+#   output now matches). Run 2 numbers are therefore NOT comparable to run 1.
+#
+# Handling:
+#   - Run 1 (6-item TID set): recall 100%, precision 12%. Recorded in LOG.md as
+#     a PILOT. Superseded, not deleted.
+#   - The ground truth is now FROZEN. All seven flags, including a re-run of
+#     TID, are scored against this version. Any further change requires a dated
+#     entry here and a re-run of every flag already scored.
+#   - Precision figures across the two versions must never be quoted side by
+#     side as if they measured the same thing.
+#
+# The other six flag types have NOT been through a run, so their requirement
+# sets are un-fitted to any model output. If run 1's over-asking pattern repeats
+# on those six, that is the stronger evidence - it cannot be an artifact of this
+# adjustment.
+
+# LIMITATIONS
+#
+# 1. Hand-built by a non-expert from public sources. No payments risk
+#    practitioner has reviewed it. A wrong ground truth produces a confidently
+#    wrong recall number.
+# 2. Requirement sets are plausible, not authoritative. Razorpay's actual
+#    internal checklists are not public and may differ materially.
+# 3. `internally_satisfiable` is a judgement about what an aggregator would
+#    typically hold. Three values are used: true, false, partial.
+# 4. Seven flag types is not the full space of risk actions. It covers the
+#    types evidenced in the corpus plus the RBI-named third-party pattern.
+# 5. Keyword matching will under-count semantically correct predictions worded
+#    unusually. Recall computed this way is a LOWER BOUND, and it is reported
+#    as one. The cross-check was done by hand rather than by an LLM judge:
+#    every scorer miss is ruled in results/adjudication.md with the candidate
+#    text quoted, so any ruling can be checked or overturned. Both numbers are
+#    reported side by side everywhere.
+#    The limitation that REMAINS: a single adjudicator, not blind, who also
+#    wrote this ground truth and the prompts. An independent judge would be
+#    stronger. Adjudication never changed the ordering of the variants.

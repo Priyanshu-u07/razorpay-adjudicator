@@ -1,0 +1,2832 @@
+[
+  {
+    "case_id": "C001",
+    "flag_type": "FLAG_TID_INACTIVITY",
+    "outcome": "released",
+    "reason": "internal evidence resolved the flag: terminal fault PRINTER_HW_FAULT with OPEN hardware ticket TKT81120 unresolved for 120d - the aggregator caused the inactivity",
+    "rounds": 0,
+    "hold_days": 0,
+    "satisfied_internally": 7,
+    "asked_of_merchant": 0,
+    "impossible": [],
+    "events": [
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TI1",
+        "source": "ticket_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TI2",
+        "source": "telemetry_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TI7",
+        "source": "telemetry_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TI8",
+        "source": "telemetry_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TI9",
+        "source": "asset_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TI10",
+        "source": "asset_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TI6",
+        "source": "txn_store"
+      },
+      {
+        "round": 0,
+        "event": "stage2",
+        "linkage_hops": 6,
+        "resolved": true,
+        "reason": "terminal fault PRINTER_HW_FAULT with OPEN hardware ticket TKT81120 unresolved for 120d - the aggregator caused the inactivity"
+      },
+      {
+        "round": 0,
+        "event": "closed",
+        "outcome": "released",
+        "reason": "internal evidence resolved the flag: terminal fault PRINTER_HW_FAULT with OPEN hardware ticket TKT81120 unresolved for 120d - the aggregator caused the inactivity",
+        "hold_days": 0
+      }
+    ]
+  },
+  {
+    "case_id": "C002",
+    "flag_type": "FLAG_TID_INACTIVITY",
+    "outcome": "released",
+    "reason": "internal evidence resolved the flag: terminal fault PRINTER_HW_FAULT with OPEN hardware ticket TKT29958 unresolved for 140d - the aggregator caused the inactivity",
+    "rounds": 0,
+    "hold_days": 0,
+    "satisfied_internally": 7,
+    "asked_of_merchant": 0,
+    "impossible": [],
+    "events": [
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TI1",
+        "source": "ticket_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TI2",
+        "source": "telemetry_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TI7",
+        "source": "telemetry_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TI8",
+        "source": "telemetry_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TI9",
+        "source": "asset_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TI10",
+        "source": "asset_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TI6",
+        "source": "txn_store"
+      },
+      {
+        "round": 0,
+        "event": "stage2",
+        "linkage_hops": 6,
+        "resolved": true,
+        "reason": "terminal fault PRINTER_HW_FAULT with OPEN hardware ticket TKT29958 unresolved for 140d - the aggregator caused the inactivity"
+      },
+      {
+        "round": 0,
+        "event": "closed",
+        "outcome": "released",
+        "reason": "internal evidence resolved the flag: terminal fault PRINTER_HW_FAULT with OPEN hardware ticket TKT29958 unresolved for 140d - the aggregator caused the inactivity",
+        "hold_days": 0
+      }
+    ]
+  },
+  {
+    "case_id": "C003",
+    "flag_type": "FLAG_TID_INACTIVITY",
+    "outcome": "released",
+    "reason": "internal evidence resolved the flag: device deregistered from network (SIM_DEREGISTERED) - not merchant dormancy",
+    "rounds": 0,
+    "hold_days": 0,
+    "satisfied_internally": 6,
+    "asked_of_merchant": 0,
+    "impossible": [],
+    "events": [
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TI2",
+        "source": "telemetry_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TI7",
+        "source": "telemetry_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TI8",
+        "source": "telemetry_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TI9",
+        "source": "asset_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TI10",
+        "source": "asset_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TI6",
+        "source": "txn_store"
+      },
+      {
+        "round": 0,
+        "event": "stage2",
+        "linkage_hops": 5,
+        "resolved": true,
+        "reason": "device deregistered from network (SIM_DEREGISTERED) - not merchant dormancy"
+      },
+      {
+        "round": 0,
+        "event": "closed",
+        "outcome": "released",
+        "reason": "internal evidence resolved the flag: device deregistered from network (SIM_DEREGISTERED) - not merchant dormancy",
+        "hold_days": 0
+      }
+    ]
+  },
+  {
+    "case_id": "C004",
+    "flag_type": "FLAG_TID_INACTIVITY",
+    "outcome": "released",
+    "reason": "internal evidence resolved the flag: device deregistered from network (SIM_DEREGISTERED) - not merchant dormancy",
+    "rounds": 0,
+    "hold_days": 0,
+    "satisfied_internally": 6,
+    "asked_of_merchant": 0,
+    "impossible": [],
+    "events": [
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TI2",
+        "source": "telemetry_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TI7",
+        "source": "telemetry_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TI8",
+        "source": "telemetry_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TI9",
+        "source": "asset_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TI10",
+        "source": "asset_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TI6",
+        "source": "txn_store"
+      },
+      {
+        "round": 0,
+        "event": "stage2",
+        "linkage_hops": 6,
+        "resolved": true,
+        "reason": "device deregistered from network (SIM_DEREGISTERED) - not merchant dormancy"
+      },
+      {
+        "round": 0,
+        "event": "closed",
+        "outcome": "released",
+        "reason": "internal evidence resolved the flag: device deregistered from network (SIM_DEREGISTERED) - not merchant dormancy",
+        "hold_days": 0
+      }
+    ]
+  },
+  {
+    "case_id": "C005",
+    "flag_type": "FLAG_TID_INACTIVITY",
+    "outcome": "released",
+    "reason": "internal evidence resolved the flag: merchant still transacting on another channel on the same MID",
+    "rounds": 0,
+    "hold_days": 0,
+    "satisfied_internally": 6,
+    "asked_of_merchant": 0,
+    "impossible": [],
+    "events": [
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TI2",
+        "source": "telemetry_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TI7",
+        "source": "telemetry_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TI8",
+        "source": "telemetry_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TI9",
+        "source": "asset_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TI10",
+        "source": "asset_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TI6",
+        "source": "txn_store"
+      },
+      {
+        "round": 0,
+        "event": "stage2",
+        "linkage_hops": 5,
+        "resolved": true,
+        "reason": "merchant still transacting on another channel on the same MID"
+      },
+      {
+        "round": 0,
+        "event": "closed",
+        "outcome": "released",
+        "reason": "internal evidence resolved the flag: merchant still transacting on another channel on the same MID",
+        "hold_days": 0
+      }
+    ]
+  },
+  {
+    "case_id": "C006",
+    "flag_type": "FLAG_TID_INACTIVITY",
+    "outcome": "released",
+    "reason": "internal evidence resolved the flag: merchant still transacting on another channel on the same MID",
+    "rounds": 0,
+    "hold_days": 0,
+    "satisfied_internally": 6,
+    "asked_of_merchant": 0,
+    "impossible": [],
+    "events": [
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TI2",
+        "source": "telemetry_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TI7",
+        "source": "telemetry_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TI8",
+        "source": "telemetry_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TI9",
+        "source": "asset_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TI10",
+        "source": "asset_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TI6",
+        "source": "txn_store"
+      },
+      {
+        "round": 0,
+        "event": "stage2",
+        "linkage_hops": 5,
+        "resolved": true,
+        "reason": "merchant still transacting on another channel on the same MID"
+      },
+      {
+        "round": 0,
+        "event": "closed",
+        "outcome": "released",
+        "reason": "internal evidence resolved the flag: merchant still transacting on another channel on the same MID",
+        "hold_days": 0
+      }
+    ]
+  },
+  {
+    "case_id": "C007",
+    "flag_type": "FLAG_TID_INACTIVITY",
+    "outcome": "released",
+    "reason": "all requirements satisfied in one round",
+    "rounds": 1,
+    "hold_days": 0,
+    "satisfied_internally": 9,
+    "asked_of_merchant": 3,
+    "impossible": [],
+    "events": [
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TI2",
+        "source": "telemetry_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TI7",
+        "source": "telemetry_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TI8",
+        "source": "telemetry_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TI9",
+        "source": "asset_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TI10",
+        "source": "asset_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TI6",
+        "source": "txn_store"
+      },
+      {
+        "round": 0,
+        "event": "stage2",
+        "linkage_hops": 5,
+        "resolved": false,
+        "reason": "device healthy, no fault ticket, no other active channel"
+      },
+      {
+        "round": 0,
+        "event": "stage1_plan",
+        "mode": "id_tagged_model_output",
+        "findings": {
+          "open_hardware_ticket": false,
+          "device_fault_code": false,
+          "device_network_registered": true,
+          "device_heartbeat_recent": true,
+          "device_deployed": true,
+          "rental_billing_active": false,
+          "other_channel_active": false,
+          "prior_cases_exist": false
+        },
+        "asked": [
+          "TI3",
+          "TI4",
+          "TI5"
+        ]
+      },
+      {
+        "round": 1,
+        "event": "requested",
+        "requirements": [
+          "TI3",
+          "TI4",
+          "TI5"
+        ],
+        "count": 3
+      },
+      {
+        "round": 1,
+        "event": "satisfied",
+        "requirement": "TI3",
+        "source": "merchant_submission"
+      },
+      {
+        "round": 1,
+        "event": "satisfied",
+        "requirement": "TI4",
+        "source": "merchant_submission"
+      },
+      {
+        "round": 1,
+        "event": "satisfied",
+        "requirement": "TI5",
+        "source": "merchant_submission"
+      },
+      {
+        "round": 1,
+        "event": "closed",
+        "outcome": "released",
+        "reason": "all requirements satisfied in one round",
+        "hold_days": 0
+      }
+    ]
+  },
+  {
+    "case_id": "C008",
+    "flag_type": "FLAG_TID_INACTIVITY",
+    "outcome": "released",
+    "reason": "all requirements satisfied in one round",
+    "rounds": 1,
+    "hold_days": 0,
+    "satisfied_internally": 9,
+    "asked_of_merchant": 3,
+    "impossible": [],
+    "events": [
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TI2",
+        "source": "telemetry_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TI7",
+        "source": "telemetry_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TI8",
+        "source": "telemetry_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TI9",
+        "source": "asset_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TI10",
+        "source": "asset_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TI6",
+        "source": "txn_store"
+      },
+      {
+        "round": 0,
+        "event": "stage2",
+        "linkage_hops": 5,
+        "resolved": false,
+        "reason": "device healthy, no fault ticket, no other active channel"
+      },
+      {
+        "round": 0,
+        "event": "stage1_plan",
+        "mode": "id_tagged_model_output",
+        "findings": {
+          "open_hardware_ticket": false,
+          "device_fault_code": false,
+          "device_network_registered": true,
+          "device_heartbeat_recent": true,
+          "device_deployed": true,
+          "rental_billing_active": false,
+          "other_channel_active": false,
+          "prior_cases_exist": false
+        },
+        "asked": [
+          "TI3",
+          "TI4",
+          "TI5"
+        ]
+      },
+      {
+        "round": 1,
+        "event": "requested",
+        "requirements": [
+          "TI3",
+          "TI4",
+          "TI5"
+        ],
+        "count": 3
+      },
+      {
+        "round": 1,
+        "event": "satisfied",
+        "requirement": "TI3",
+        "source": "merchant_submission"
+      },
+      {
+        "round": 1,
+        "event": "satisfied",
+        "requirement": "TI4",
+        "source": "merchant_submission"
+      },
+      {
+        "round": 1,
+        "event": "satisfied",
+        "requirement": "TI5",
+        "source": "merchant_submission"
+      },
+      {
+        "round": 1,
+        "event": "closed",
+        "outcome": "released",
+        "reason": "all requirements satisfied in one round",
+        "hold_days": 0
+      }
+    ]
+  },
+  {
+    "case_id": "C009",
+    "flag_type": "FLAG_KYC_DISCREPANCY",
+    "outcome": "released",
+    "reason": "internal evidence resolved the flag: penny-drop name 'Reddy Enterprises Private Limited' matches legal name after suffix/format normalisation",
+    "rounds": 0,
+    "hold_days": 0,
+    "satisfied_internally": 3,
+    "asked_of_merchant": 0,
+    "impossible": [],
+    "events": [
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "KD1",
+        "source": "kyc_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "KD5",
+        "source": "kyc_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "KD6",
+        "source": "txn_store"
+      },
+      {
+        "round": 0,
+        "event": "stage2",
+        "linkage_hops": 4,
+        "resolved": true,
+        "reason": "penny-drop name 'Reddy Enterprises Private Limited' matches legal name after suffix/format normalisation"
+      },
+      {
+        "round": 0,
+        "event": "closed",
+        "outcome": "released",
+        "reason": "internal evidence resolved the flag: penny-drop name 'Reddy Enterprises Private Limited' matches legal name after suffix/format normalisation",
+        "hold_days": 0
+      }
+    ]
+  },
+  {
+    "case_id": "C010",
+    "flag_type": "FLAG_KYC_DISCREPANCY",
+    "outcome": "released",
+    "reason": "internal evidence resolved the flag: penny-drop name 'Rao Systems Private Limited' matches legal name after suffix/format normalisation",
+    "rounds": 0,
+    "hold_days": 0,
+    "satisfied_internally": 3,
+    "asked_of_merchant": 0,
+    "impossible": [],
+    "events": [
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "KD1",
+        "source": "kyc_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "KD5",
+        "source": "kyc_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "KD6",
+        "source": "txn_store"
+      },
+      {
+        "round": 0,
+        "event": "stage2",
+        "linkage_hops": 3,
+        "resolved": true,
+        "reason": "penny-drop name 'Rao Systems Private Limited' matches legal name after suffix/format normalisation"
+      },
+      {
+        "round": 0,
+        "event": "closed",
+        "outcome": "released",
+        "reason": "internal evidence resolved the flag: penny-drop name 'Rao Systems Private Limited' matches legal name after suffix/format normalisation",
+        "hold_days": 0
+      }
+    ]
+  },
+  {
+    "case_id": "C011",
+    "flag_type": "FLAG_KYC_DISCREPANCY",
+    "outcome": "released",
+    "reason": "internal evidence resolved the flag: penny-drop name 'Patel Systems Private Limited' matches legal name after suffix/format normalisation",
+    "rounds": 0,
+    "hold_days": 0,
+    "satisfied_internally": 3,
+    "asked_of_merchant": 0,
+    "impossible": [],
+    "events": [
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "KD1",
+        "source": "kyc_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "KD5",
+        "source": "kyc_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "KD6",
+        "source": "txn_store"
+      },
+      {
+        "round": 0,
+        "event": "stage2",
+        "linkage_hops": 4,
+        "resolved": true,
+        "reason": "penny-drop name 'Patel Systems Private Limited' matches legal name after suffix/format normalisation"
+      },
+      {
+        "round": 0,
+        "event": "closed",
+        "outcome": "released",
+        "reason": "internal evidence resolved the flag: penny-drop name 'Patel Systems Private Limited' matches legal name after suffix/format normalisation",
+        "hold_days": 0
+      }
+    ]
+  },
+  {
+    "case_id": "C012",
+    "flag_type": "FLAG_KYC_DISCREPANCY",
+    "outcome": "released",
+    "reason": "internal evidence resolved the flag: penny-drop name 'Desai Enterprises Private Limited' matches legal name after suffix/format normalisation",
+    "rounds": 0,
+    "hold_days": 0,
+    "satisfied_internally": 3,
+    "asked_of_merchant": 0,
+    "impossible": [],
+    "events": [
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "KD1",
+        "source": "kyc_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "KD5",
+        "source": "kyc_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "KD6",
+        "source": "txn_store"
+      },
+      {
+        "round": 0,
+        "event": "stage2",
+        "linkage_hops": 3,
+        "resolved": true,
+        "reason": "penny-drop name 'Desai Enterprises Private Limited' matches legal name after suffix/format normalisation"
+      },
+      {
+        "round": 0,
+        "event": "closed",
+        "outcome": "released",
+        "reason": "internal evidence resolved the flag: penny-drop name 'Desai Enterprises Private Limited' matches legal name after suffix/format normalisation",
+        "hold_days": 0
+      }
+    ]
+  },
+  {
+    "case_id": "C013",
+    "flag_type": "FLAG_KYC_DISCREPANCY",
+    "outcome": "released",
+    "reason": "internal evidence resolved the flag: MCA record shows a name change explaining the variant name",
+    "rounds": 0,
+    "hold_days": 0,
+    "satisfied_internally": 3,
+    "asked_of_merchant": 0,
+    "impossible": [],
+    "events": [
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "KD1",
+        "source": "kyc_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "KD5",
+        "source": "kyc_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "KD6",
+        "source": "txn_store"
+      },
+      {
+        "round": 0,
+        "event": "stage2",
+        "linkage_hops": 3,
+        "resolved": true,
+        "reason": "MCA record shows a name change explaining the variant name"
+      },
+      {
+        "round": 0,
+        "event": "closed",
+        "outcome": "released",
+        "reason": "internal evidence resolved the flag: MCA record shows a name change explaining the variant name",
+        "hold_days": 0
+      }
+    ]
+  },
+  {
+    "case_id": "C014",
+    "flag_type": "FLAG_KYC_DISCREPANCY",
+    "outcome": "released",
+    "reason": "internal evidence resolved the flag: MCA record shows a name change explaining the variant name",
+    "rounds": 0,
+    "hold_days": 0,
+    "satisfied_internally": 3,
+    "asked_of_merchant": 0,
+    "impossible": [],
+    "events": [
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "KD1",
+        "source": "kyc_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "KD5",
+        "source": "kyc_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "KD6",
+        "source": "txn_store"
+      },
+      {
+        "round": 0,
+        "event": "stage2",
+        "linkage_hops": 4,
+        "resolved": true,
+        "reason": "MCA record shows a name change explaining the variant name"
+      },
+      {
+        "round": 0,
+        "event": "closed",
+        "outcome": "released",
+        "reason": "internal evidence resolved the flag: MCA record shows a name change explaining the variant name",
+        "hold_days": 0
+      }
+    ]
+  },
+  {
+    "case_id": "C015",
+    "flag_type": "FLAG_KYC_DISCREPANCY",
+    "outcome": "released",
+    "reason": "all requirements satisfied in one round",
+    "rounds": 1,
+    "hold_days": 0,
+    "satisfied_internally": 6,
+    "asked_of_merchant": 3,
+    "impossible": [],
+    "events": [
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "KD1",
+        "source": "kyc_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "KD5",
+        "source": "kyc_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "KD6",
+        "source": "txn_store"
+      },
+      {
+        "round": 0,
+        "event": "stage2",
+        "linkage_hops": 3,
+        "resolved": false,
+        "reason": "penny-drop name differs from legal name beyond formatting"
+      },
+      {
+        "round": 0,
+        "event": "stage1_plan",
+        "mode": "frozen_checklist_simplification"
+      },
+      {
+        "round": 1,
+        "event": "requested",
+        "requirements": [
+          "KD2",
+          "KD3",
+          "KD4"
+        ],
+        "count": 3
+      },
+      {
+        "round": 1,
+        "event": "satisfied",
+        "requirement": "KD2",
+        "source": "merchant_submission"
+      },
+      {
+        "round": 1,
+        "event": "satisfied",
+        "requirement": "KD3",
+        "source": "merchant_submission"
+      },
+      {
+        "round": 1,
+        "event": "satisfied",
+        "requirement": "KD4",
+        "source": "merchant_submission"
+      },
+      {
+        "round": 1,
+        "event": "closed",
+        "outcome": "released",
+        "reason": "all requirements satisfied in one round",
+        "hold_days": 0
+      }
+    ]
+  },
+  {
+    "case_id": "C016",
+    "flag_type": "FLAG_KYC_DISCREPANCY",
+    "outcome": "released",
+    "reason": "all requirements satisfied in one round",
+    "rounds": 1,
+    "hold_days": 0,
+    "satisfied_internally": 6,
+    "asked_of_merchant": 3,
+    "impossible": [],
+    "events": [
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "KD1",
+        "source": "kyc_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "KD5",
+        "source": "kyc_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "KD6",
+        "source": "txn_store"
+      },
+      {
+        "round": 0,
+        "event": "stage2",
+        "linkage_hops": 3,
+        "resolved": false,
+        "reason": "penny-drop name differs from legal name beyond formatting"
+      },
+      {
+        "round": 0,
+        "event": "stage1_plan",
+        "mode": "frozen_checklist_simplification"
+      },
+      {
+        "round": 1,
+        "event": "requested",
+        "requirements": [
+          "KD2",
+          "KD3",
+          "KD4"
+        ],
+        "count": 3
+      },
+      {
+        "round": 1,
+        "event": "satisfied",
+        "requirement": "KD2",
+        "source": "merchant_submission"
+      },
+      {
+        "round": 1,
+        "event": "satisfied",
+        "requirement": "KD3",
+        "source": "merchant_submission"
+      },
+      {
+        "round": 1,
+        "event": "satisfied",
+        "requirement": "KD4",
+        "source": "merchant_submission"
+      },
+      {
+        "round": 1,
+        "event": "closed",
+        "outcome": "released",
+        "reason": "all requirements satisfied in one round",
+        "hold_days": 0
+      }
+    ]
+  },
+  {
+    "case_id": "C017",
+    "flag_type": "FLAG_VOLUME_SPIKE",
+    "outcome": "released",
+    "reason": "internal evidence resolved the flag: merchant notified support of a sale in ticket TKT77931",
+    "rounds": 0,
+    "hold_days": 0,
+    "satisfied_internally": 3,
+    "asked_of_merchant": 0,
+    "impossible": [],
+    "events": [
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "VS5",
+        "source": "txn_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "VS1",
+        "source": "ticket_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "VS2",
+        "source": "ticket_store"
+      },
+      {
+        "round": 0,
+        "event": "stage2",
+        "linkage_hops": 5,
+        "resolved": true,
+        "reason": "merchant notified support of a sale in ticket TKT77931"
+      },
+      {
+        "round": 0,
+        "event": "closed",
+        "outcome": "released",
+        "reason": "internal evidence resolved the flag: merchant notified support of a sale in ticket TKT77931",
+        "hold_days": 0
+      }
+    ]
+  },
+  {
+    "case_id": "C018",
+    "flag_type": "FLAG_VOLUME_SPIKE",
+    "outcome": "released",
+    "reason": "internal evidence resolved the flag: merchant notified support of a sale in ticket TKT61174",
+    "rounds": 0,
+    "hold_days": 0,
+    "satisfied_internally": 3,
+    "asked_of_merchant": 0,
+    "impossible": [],
+    "events": [
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "VS5",
+        "source": "txn_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "VS1",
+        "source": "ticket_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "VS2",
+        "source": "ticket_store"
+      },
+      {
+        "round": 0,
+        "event": "stage2",
+        "linkage_hops": 4,
+        "resolved": true,
+        "reason": "merchant notified support of a sale in ticket TKT61174"
+      },
+      {
+        "round": 0,
+        "event": "closed",
+        "outcome": "released",
+        "reason": "internal evidence resolved the flag: merchant notified support of a sale in ticket TKT61174",
+        "hold_days": 0
+      }
+    ]
+  },
+  {
+    "case_id": "C019",
+    "flag_type": "FLAG_VOLUME_SPIKE",
+    "outcome": "released",
+    "reason": "internal evidence resolved the flag: platform capture incident batched transactions - we caused the spike",
+    "rounds": 0,
+    "hold_days": 0,
+    "satisfied_internally": 1,
+    "asked_of_merchant": 0,
+    "impossible": [],
+    "events": [
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "VS5",
+        "source": "txn_store"
+      },
+      {
+        "round": 0,
+        "event": "stage2",
+        "linkage_hops": 3,
+        "resolved": true,
+        "reason": "platform capture incident batched transactions - we caused the spike"
+      },
+      {
+        "round": 0,
+        "event": "closed",
+        "outcome": "released",
+        "reason": "internal evidence resolved the flag: platform capture incident batched transactions - we caused the spike",
+        "hold_days": 0
+      }
+    ]
+  },
+  {
+    "case_id": "C020",
+    "flag_type": "FLAG_VOLUME_SPIKE",
+    "outcome": "released",
+    "reason": "internal evidence resolved the flag: platform capture incident batched transactions - we caused the spike",
+    "rounds": 0,
+    "hold_days": 0,
+    "satisfied_internally": 1,
+    "asked_of_merchant": 0,
+    "impossible": [],
+    "events": [
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "VS5",
+        "source": "txn_store"
+      },
+      {
+        "round": 0,
+        "event": "stage2",
+        "linkage_hops": 3,
+        "resolved": true,
+        "reason": "platform capture incident batched transactions - we caused the spike"
+      },
+      {
+        "round": 0,
+        "event": "closed",
+        "outcome": "released",
+        "reason": "internal evidence resolved the flag: platform capture incident batched transactions - we caused the spike",
+        "hold_days": 0
+      }
+    ]
+  },
+  {
+    "case_id": "C021",
+    "flag_type": "FLAG_VOLUME_SPIKE",
+    "outcome": "released",
+    "reason": "internal evidence resolved the flag: new integration activated 1d before the spike",
+    "rounds": 0,
+    "hold_days": 0,
+    "satisfied_internally": 1,
+    "asked_of_merchant": 0,
+    "impossible": [],
+    "events": [
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "VS5",
+        "source": "txn_store"
+      },
+      {
+        "round": 0,
+        "event": "stage2",
+        "linkage_hops": 3,
+        "resolved": true,
+        "reason": "new integration activated 1d before the spike"
+      },
+      {
+        "round": 0,
+        "event": "closed",
+        "outcome": "released",
+        "reason": "internal evidence resolved the flag: new integration activated 1d before the spike",
+        "hold_days": 0
+      }
+    ]
+  },
+  {
+    "case_id": "C022",
+    "flag_type": "FLAG_VOLUME_SPIKE",
+    "outcome": "released",
+    "reason": "internal evidence resolved the flag: new integration activated 3d before the spike",
+    "rounds": 0,
+    "hold_days": 0,
+    "satisfied_internally": 1,
+    "asked_of_merchant": 0,
+    "impossible": [],
+    "events": [
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "VS5",
+        "source": "txn_store"
+      },
+      {
+        "round": 0,
+        "event": "stage2",
+        "linkage_hops": 3,
+        "resolved": true,
+        "reason": "new integration activated 3d before the spike"
+      },
+      {
+        "round": 0,
+        "event": "closed",
+        "outcome": "released",
+        "reason": "internal evidence resolved the flag: new integration activated 3d before the spike",
+        "hold_days": 0
+      }
+    ]
+  },
+  {
+    "case_id": "C023",
+    "flag_type": "FLAG_VOLUME_SPIKE",
+    "outcome": "human_review",
+    "reason": "escalated on detection, without merchant burden: card-testing signature: decline rate 55%, BIN concentration 79%",
+    "rounds": 0,
+    "hold_days": 14,
+    "satisfied_internally": 1,
+    "asked_of_merchant": 0,
+    "impossible": [],
+    "events": [
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "VS5",
+        "source": "txn_store"
+      },
+      {
+        "round": 0,
+        "event": "stage2",
+        "linkage_hops": 4,
+        "resolved": false,
+        "reason": "high declines / BIN concentration - card testing signature, escalate"
+      },
+      {
+        "round": 0,
+        "event": "escalate",
+        "reason": "card-testing signature: decline rate 55%, BIN concentration 79%",
+        "basis": "detection"
+      },
+      {
+        "round": 0,
+        "event": "closed",
+        "outcome": "human_review",
+        "reason": "escalated on detection, without merchant burden: card-testing signature: decline rate 55%, BIN concentration 79%",
+        "hold_days": 14
+      }
+    ]
+  },
+  {
+    "case_id": "C024",
+    "flag_type": "FLAG_VOLUME_SPIKE",
+    "outcome": "human_review",
+    "reason": "escalated on detection, without merchant burden: card-testing signature: decline rate 60%, BIN concentration 95%",
+    "rounds": 0,
+    "hold_days": 14,
+    "satisfied_internally": 1,
+    "asked_of_merchant": 0,
+    "impossible": [],
+    "events": [
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "VS5",
+        "source": "txn_store"
+      },
+      {
+        "round": 0,
+        "event": "stage2",
+        "linkage_hops": 3,
+        "resolved": false,
+        "reason": "high declines / BIN concentration - card testing signature, escalate"
+      },
+      {
+        "round": 0,
+        "event": "escalate",
+        "reason": "card-testing signature: decline rate 60%, BIN concentration 95%",
+        "basis": "detection"
+      },
+      {
+        "round": 0,
+        "event": "closed",
+        "outcome": "human_review",
+        "reason": "escalated on detection, without merchant burden: card-testing signature: decline rate 60%, BIN concentration 95%",
+        "hold_days": 14
+      }
+    ]
+  },
+  {
+    "case_id": "C025",
+    "flag_type": "FLAG_MCC_MISMATCH",
+    "outcome": "released",
+    "reason": "internal evidence resolved the flag: descriptor was rewritten by an internal tool, not the merchant",
+    "rounds": 0,
+    "hold_days": 0,
+    "satisfied_internally": 2,
+    "asked_of_merchant": 0,
+    "impossible": [],
+    "events": [
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "MC6",
+        "source": "kyc_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "MC1",
+        "source": "kyc_store"
+      },
+      {
+        "round": 0,
+        "event": "stage2",
+        "linkage_hops": 3,
+        "resolved": true,
+        "reason": "descriptor was rewritten by an internal tool, not the merchant"
+      },
+      {
+        "round": 0,
+        "event": "closed",
+        "outcome": "released",
+        "reason": "internal evidence resolved the flag: descriptor was rewritten by an internal tool, not the merchant",
+        "hold_days": 0
+      }
+    ]
+  },
+  {
+    "case_id": "C026",
+    "flag_type": "FLAG_MCC_MISMATCH",
+    "outcome": "released",
+    "reason": "internal evidence resolved the flag: descriptor was rewritten by an internal tool, not the merchant",
+    "rounds": 0,
+    "hold_days": 0,
+    "satisfied_internally": 2,
+    "asked_of_merchant": 0,
+    "impossible": [],
+    "events": [
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "MC6",
+        "source": "kyc_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "MC1",
+        "source": "kyc_store"
+      },
+      {
+        "round": 0,
+        "event": "stage2",
+        "linkage_hops": 3,
+        "resolved": true,
+        "reason": "descriptor was rewritten by an internal tool, not the merchant"
+      },
+      {
+        "round": 0,
+        "event": "closed",
+        "outcome": "released",
+        "reason": "internal evidence resolved the flag: descriptor was rewritten by an internal tool, not the merchant",
+        "hold_days": 0
+      }
+    ]
+  },
+  {
+    "case_id": "C027",
+    "flag_type": "FLAG_MCC_MISMATCH",
+    "outcome": "released",
+    "reason": "internal evidence resolved the flag: merchant holds linked MID MID4027B carrying the matching MCC",
+    "rounds": 0,
+    "hold_days": 0,
+    "satisfied_internally": 2,
+    "asked_of_merchant": 0,
+    "impossible": [],
+    "events": [
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "MC6",
+        "source": "kyc_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "MC1",
+        "source": "kyc_store"
+      },
+      {
+        "round": 0,
+        "event": "stage2",
+        "linkage_hops": 3,
+        "resolved": true,
+        "reason": "merchant holds linked MID MID4027B carrying the matching MCC"
+      },
+      {
+        "round": 0,
+        "event": "closed",
+        "outcome": "released",
+        "reason": "internal evidence resolved the flag: merchant holds linked MID MID4027B carrying the matching MCC",
+        "hold_days": 0
+      }
+    ]
+  },
+  {
+    "case_id": "C028",
+    "flag_type": "FLAG_MCC_MISMATCH",
+    "outcome": "released",
+    "reason": "internal evidence resolved the flag: merchant holds linked MID MID4028B carrying the matching MCC",
+    "rounds": 0,
+    "hold_days": 0,
+    "satisfied_internally": 2,
+    "asked_of_merchant": 0,
+    "impossible": [],
+    "events": [
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "MC6",
+        "source": "kyc_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "MC1",
+        "source": "kyc_store"
+      },
+      {
+        "round": 0,
+        "event": "stage2",
+        "linkage_hops": 3,
+        "resolved": true,
+        "reason": "merchant holds linked MID MID4028B carrying the matching MCC"
+      },
+      {
+        "round": 0,
+        "event": "closed",
+        "outcome": "released",
+        "reason": "internal evidence resolved the flag: merchant holds linked MID MID4028B carrying the matching MCC",
+        "hold_days": 0
+      }
+    ]
+  },
+  {
+    "case_id": "C029",
+    "flag_type": "FLAG_MCC_MISMATCH",
+    "outcome": "released",
+    "reason": "all requirements satisfied in one round",
+    "rounds": 1,
+    "hold_days": 0,
+    "satisfied_internally": 6,
+    "asked_of_merchant": 3,
+    "impossible": [],
+    "events": [
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "MC6",
+        "source": "kyc_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "MC1",
+        "source": "kyc_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "MC4",
+        "source": "ticket_store"
+      },
+      {
+        "round": 0,
+        "event": "stage2",
+        "linkage_hops": 4,
+        "resolved": false,
+        "reason": "no internal record explains the category divergence"
+      },
+      {
+        "round": 0,
+        "event": "stage1_plan",
+        "mode": "frozen_checklist_simplification"
+      },
+      {
+        "round": 1,
+        "event": "requested",
+        "requirements": [
+          "MC2",
+          "MC3",
+          "MC5"
+        ],
+        "count": 3
+      },
+      {
+        "round": 1,
+        "event": "satisfied",
+        "requirement": "MC2",
+        "source": "merchant_submission"
+      },
+      {
+        "round": 1,
+        "event": "satisfied",
+        "requirement": "MC3",
+        "source": "merchant_submission"
+      },
+      {
+        "round": 1,
+        "event": "satisfied",
+        "requirement": "MC5",
+        "source": "merchant_submission"
+      },
+      {
+        "round": 1,
+        "event": "closed",
+        "outcome": "released",
+        "reason": "all requirements satisfied in one round",
+        "hold_days": 0
+      }
+    ]
+  },
+  {
+    "case_id": "C030",
+    "flag_type": "FLAG_MCC_MISMATCH",
+    "outcome": "released",
+    "reason": "all requirements satisfied in one round",
+    "rounds": 1,
+    "hold_days": 0,
+    "satisfied_internally": 6,
+    "asked_of_merchant": 3,
+    "impossible": [],
+    "events": [
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "MC6",
+        "source": "kyc_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "MC1",
+        "source": "kyc_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "MC4",
+        "source": "ticket_store"
+      },
+      {
+        "round": 0,
+        "event": "stage2",
+        "linkage_hops": 4,
+        "resolved": false,
+        "reason": "no internal record explains the category divergence"
+      },
+      {
+        "round": 0,
+        "event": "stage1_plan",
+        "mode": "frozen_checklist_simplification"
+      },
+      {
+        "round": 1,
+        "event": "requested",
+        "requirements": [
+          "MC2",
+          "MC3",
+          "MC5"
+        ],
+        "count": 3
+      },
+      {
+        "round": 1,
+        "event": "satisfied",
+        "requirement": "MC2",
+        "source": "merchant_submission"
+      },
+      {
+        "round": 1,
+        "event": "satisfied",
+        "requirement": "MC3",
+        "source": "merchant_submission"
+      },
+      {
+        "round": 1,
+        "event": "satisfied",
+        "requirement": "MC5",
+        "source": "merchant_submission"
+      },
+      {
+        "round": 1,
+        "event": "closed",
+        "outcome": "released",
+        "reason": "all requirements satisfied in one round",
+        "hold_days": 0
+      }
+    ]
+  },
+  {
+    "case_id": "C031",
+    "flag_type": "FLAG_HIGH_REFUND",
+    "outcome": "released",
+    "reason": "internal evidence resolved the flag: descriptor not recognisable as the merchant brand - drives 'unrecognised charge' disputes",
+    "rounds": 0,
+    "hold_days": 0,
+    "satisfied_internally": 2,
+    "asked_of_merchant": 0,
+    "impossible": [],
+    "events": [
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "HR2",
+        "source": "txn_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "HR6",
+        "source": "txn_store"
+      },
+      {
+        "round": 0,
+        "event": "stage2",
+        "linkage_hops": 4,
+        "resolved": true,
+        "reason": "descriptor not recognisable as the merchant brand - drives 'unrecognised charge' disputes"
+      },
+      {
+        "round": 0,
+        "event": "closed",
+        "outcome": "released",
+        "reason": "internal evidence resolved the flag: descriptor not recognisable as the merchant brand - drives 'unrecognised charge' disputes",
+        "hold_days": 0
+      }
+    ]
+  },
+  {
+    "case_id": "C032",
+    "flag_type": "FLAG_HIGH_REFUND",
+    "outcome": "released",
+    "reason": "internal evidence resolved the flag: descriptor not recognisable as the merchant brand - drives 'unrecognised charge' disputes",
+    "rounds": 0,
+    "hold_days": 0,
+    "satisfied_internally": 2,
+    "asked_of_merchant": 0,
+    "impossible": [],
+    "events": [
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "HR2",
+        "source": "txn_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "HR6",
+        "source": "txn_store"
+      },
+      {
+        "round": 0,
+        "event": "stage2",
+        "linkage_hops": 3,
+        "resolved": true,
+        "reason": "descriptor not recognisable as the merchant brand - drives 'unrecognised charge' disputes"
+      },
+      {
+        "round": 0,
+        "event": "closed",
+        "outcome": "released",
+        "reason": "internal evidence resolved the flag: descriptor not recognisable as the merchant brand - drives 'unrecognised charge' disputes",
+        "hold_days": 0
+      }
+    ]
+  },
+  {
+    "case_id": "C033",
+    "flag_type": "FLAG_HIGH_REFUND",
+    "outcome": "released",
+    "reason": "internal evidence resolved the flag: platform double-submit incident generated the duplicate-charge disputes",
+    "rounds": 0,
+    "hold_days": 0,
+    "satisfied_internally": 2,
+    "asked_of_merchant": 0,
+    "impossible": [],
+    "events": [
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "HR2",
+        "source": "txn_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "HR6",
+        "source": "txn_store"
+      },
+      {
+        "round": 0,
+        "event": "stage2",
+        "linkage_hops": 4,
+        "resolved": true,
+        "reason": "platform double-submit incident generated the duplicate-charge disputes"
+      },
+      {
+        "round": 0,
+        "event": "closed",
+        "outcome": "released",
+        "reason": "internal evidence resolved the flag: platform double-submit incident generated the duplicate-charge disputes",
+        "hold_days": 0
+      }
+    ]
+  },
+  {
+    "case_id": "C034",
+    "flag_type": "FLAG_HIGH_REFUND",
+    "outcome": "released",
+    "reason": "internal evidence resolved the flag: platform double-submit incident generated the duplicate-charge disputes",
+    "rounds": 0,
+    "hold_days": 0,
+    "satisfied_internally": 2,
+    "asked_of_merchant": 0,
+    "impossible": [],
+    "events": [
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "HR2",
+        "source": "txn_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "HR6",
+        "source": "txn_store"
+      },
+      {
+        "round": 0,
+        "event": "stage2",
+        "linkage_hops": 3,
+        "resolved": true,
+        "reason": "platform double-submit incident generated the duplicate-charge disputes"
+      },
+      {
+        "round": 0,
+        "event": "closed",
+        "outcome": "released",
+        "reason": "internal evidence resolved the flag: platform double-submit incident generated the duplicate-charge disputes",
+        "hold_days": 0
+      }
+    ]
+  },
+  {
+    "case_id": "C035",
+    "flag_type": "FLAG_HIGH_REFUND",
+    "outcome": "released",
+    "reason": "all requirements satisfied in one round",
+    "rounds": 1,
+    "hold_days": 0,
+    "satisfied_internally": 6,
+    "asked_of_merchant": 4,
+    "impossible": [],
+    "events": [
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "HR2",
+        "source": "txn_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "HR6",
+        "source": "txn_store"
+      },
+      {
+        "round": 0,
+        "event": "stage2",
+        "linkage_hops": 3,
+        "resolved": false,
+        "reason": "dispute reason codes point outward; merchant evidence required"
+      },
+      {
+        "round": 0,
+        "event": "stage1_plan",
+        "mode": "frozen_checklist_simplification"
+      },
+      {
+        "round": 1,
+        "event": "requested",
+        "requirements": [
+          "HR1",
+          "HR3",
+          "HR4",
+          "HR5"
+        ],
+        "count": 4
+      },
+      {
+        "round": 1,
+        "event": "satisfied",
+        "requirement": "HR1",
+        "source": "merchant_submission"
+      },
+      {
+        "round": 1,
+        "event": "satisfied",
+        "requirement": "HR3",
+        "source": "merchant_submission"
+      },
+      {
+        "round": 1,
+        "event": "satisfied",
+        "requirement": "HR4",
+        "source": "merchant_submission"
+      },
+      {
+        "round": 1,
+        "event": "satisfied",
+        "requirement": "HR5",
+        "source": "merchant_submission"
+      },
+      {
+        "round": 1,
+        "event": "closed",
+        "outcome": "released",
+        "reason": "all requirements satisfied in one round",
+        "hold_days": 0
+      }
+    ]
+  },
+  {
+    "case_id": "C036",
+    "flag_type": "FLAG_HIGH_REFUND",
+    "outcome": "released",
+    "reason": "all requirements satisfied in one round",
+    "rounds": 1,
+    "hold_days": 0,
+    "satisfied_internally": 6,
+    "asked_of_merchant": 4,
+    "impossible": [],
+    "events": [
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "HR2",
+        "source": "txn_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "HR6",
+        "source": "txn_store"
+      },
+      {
+        "round": 0,
+        "event": "stage2",
+        "linkage_hops": 3,
+        "resolved": false,
+        "reason": "dispute reason codes point outward; merchant evidence required"
+      },
+      {
+        "round": 0,
+        "event": "stage1_plan",
+        "mode": "frozen_checklist_simplification"
+      },
+      {
+        "round": 1,
+        "event": "requested",
+        "requirements": [
+          "HR1",
+          "HR3",
+          "HR4",
+          "HR5"
+        ],
+        "count": 4
+      },
+      {
+        "round": 1,
+        "event": "satisfied",
+        "requirement": "HR1",
+        "source": "merchant_submission"
+      },
+      {
+        "round": 1,
+        "event": "satisfied",
+        "requirement": "HR3",
+        "source": "merchant_submission"
+      },
+      {
+        "round": 1,
+        "event": "satisfied",
+        "requirement": "HR4",
+        "source": "merchant_submission"
+      },
+      {
+        "round": 1,
+        "event": "satisfied",
+        "requirement": "HR5",
+        "source": "merchant_submission"
+      },
+      {
+        "round": 1,
+        "event": "closed",
+        "outcome": "released",
+        "reason": "all requirements satisfied in one round",
+        "hold_days": 0
+      }
+    ]
+  },
+  {
+    "case_id": "C037",
+    "flag_type": "FLAG_THIRD_PARTY_BENEFICIARY",
+    "outcome": "released",
+    "reason": "internal evidence resolved the flag: beneficiary name matches the legal entity after normalisation",
+    "rounds": 0,
+    "hold_days": 0,
+    "satisfied_internally": 3,
+    "asked_of_merchant": 0,
+    "impossible": [],
+    "events": [
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TP3",
+        "source": "settlement_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TP7",
+        "source": "settlement_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TP1",
+        "source": "kyc_store"
+      },
+      {
+        "round": 0,
+        "event": "stage2",
+        "linkage_hops": 3,
+        "resolved": true,
+        "reason": "beneficiary name matches the legal entity after normalisation"
+      },
+      {
+        "round": 0,
+        "event": "closed",
+        "outcome": "released",
+        "reason": "internal evidence resolved the flag: beneficiary name matches the legal entity after normalisation",
+        "hold_days": 0
+      }
+    ]
+  },
+  {
+    "case_id": "C038",
+    "flag_type": "FLAG_THIRD_PARTY_BENEFICIARY",
+    "outcome": "released",
+    "reason": "internal evidence resolved the flag: beneficiary name matches the legal entity after normalisation",
+    "rounds": 0,
+    "hold_days": 0,
+    "satisfied_internally": 3,
+    "asked_of_merchant": 0,
+    "impossible": [],
+    "events": [
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TP3",
+        "source": "settlement_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TP7",
+        "source": "settlement_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TP1",
+        "source": "kyc_store"
+      },
+      {
+        "round": 0,
+        "event": "stage2",
+        "linkage_hops": 4,
+        "resolved": true,
+        "reason": "beneficiary name matches the legal entity after normalisation"
+      },
+      {
+        "round": 0,
+        "event": "closed",
+        "outcome": "released",
+        "reason": "internal evidence resolved the flag: beneficiary name matches the legal entity after normalisation",
+        "hold_days": 0
+      }
+    ]
+  },
+  {
+    "case_id": "C039",
+    "flag_type": "FLAG_THIRD_PARTY_BENEFICIARY",
+    "outcome": "human_review",
+    "reason": "contractual flag: merchant supplied the requested documents in one round, but a beneficiary-relationship judgement is reserved to an analyst",
+    "rounds": 1,
+    "hold_days": 14,
+    "satisfied_internally": 7,
+    "asked_of_merchant": 4,
+    "impossible": [],
+    "events": [
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TP3",
+        "source": "settlement_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TP7",
+        "source": "settlement_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TP1",
+        "source": "kyc_store"
+      },
+      {
+        "round": 0,
+        "event": "stage2",
+        "linkage_hops": 3,
+        "resolved": false,
+        "reason": "beneficiary is not the legal entity - contractual question, documents required"
+      },
+      {
+        "round": 0,
+        "event": "stage1_plan",
+        "mode": "frozen_checklist_simplification"
+      },
+      {
+        "round": 1,
+        "event": "requested",
+        "requirements": [
+          "TP2",
+          "TP4",
+          "TP5",
+          "TP6"
+        ],
+        "count": 4
+      },
+      {
+        "round": 1,
+        "event": "satisfied",
+        "requirement": "TP2",
+        "source": "merchant_submission"
+      },
+      {
+        "round": 1,
+        "event": "satisfied",
+        "requirement": "TP4",
+        "source": "merchant_submission"
+      },
+      {
+        "round": 1,
+        "event": "satisfied",
+        "requirement": "TP5",
+        "source": "merchant_submission"
+      },
+      {
+        "round": 1,
+        "event": "satisfied",
+        "requirement": "TP6",
+        "source": "merchant_submission"
+      },
+      {
+        "round": 1,
+        "event": "route",
+        "hypothesis_class": "contractual",
+        "reason": "contractual hypothesis - documents received but the relationship judgement is not automatable"
+      },
+      {
+        "round": 1,
+        "event": "closed",
+        "outcome": "human_review",
+        "reason": "contractual flag: merchant supplied the requested documents in one round, but a beneficiary-relationship judgement is reserved to an analyst",
+        "hold_days": 14
+      }
+    ]
+  },
+  {
+    "case_id": "C040",
+    "flag_type": "FLAG_THIRD_PARTY_BENEFICIARY",
+    "outcome": "human_review",
+    "reason": "contractual flag: merchant supplied the requested documents in one round, but a beneficiary-relationship judgement is reserved to an analyst",
+    "rounds": 1,
+    "hold_days": 14,
+    "satisfied_internally": 7,
+    "asked_of_merchant": 4,
+    "impossible": [],
+    "events": [
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TP3",
+        "source": "settlement_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TP7",
+        "source": "settlement_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TP1",
+        "source": "kyc_store"
+      },
+      {
+        "round": 0,
+        "event": "stage2",
+        "linkage_hops": 3,
+        "resolved": false,
+        "reason": "beneficiary is not the legal entity - contractual question, documents required"
+      },
+      {
+        "round": 0,
+        "event": "stage1_plan",
+        "mode": "frozen_checklist_simplification"
+      },
+      {
+        "round": 1,
+        "event": "requested",
+        "requirements": [
+          "TP2",
+          "TP4",
+          "TP5",
+          "TP6"
+        ],
+        "count": 4
+      },
+      {
+        "round": 1,
+        "event": "satisfied",
+        "requirement": "TP2",
+        "source": "merchant_submission"
+      },
+      {
+        "round": 1,
+        "event": "satisfied",
+        "requirement": "TP4",
+        "source": "merchant_submission"
+      },
+      {
+        "round": 1,
+        "event": "satisfied",
+        "requirement": "TP5",
+        "source": "merchant_submission"
+      },
+      {
+        "round": 1,
+        "event": "satisfied",
+        "requirement": "TP6",
+        "source": "merchant_submission"
+      },
+      {
+        "round": 1,
+        "event": "route",
+        "hypothesis_class": "contractual",
+        "reason": "contractual hypothesis - documents received but the relationship judgement is not automatable"
+      },
+      {
+        "round": 1,
+        "event": "closed",
+        "outcome": "human_review",
+        "reason": "contractual flag: merchant supplied the requested documents in one round, but a beneficiary-relationship judgement is reserved to an analyst",
+        "hold_days": 14
+      }
+    ]
+  },
+  {
+    "case_id": "C041",
+    "flag_type": "FLAG_THIRD_PARTY_BENEFICIARY",
+    "outcome": "human_review",
+    "reason": "escalated on detection, without merchant burden: beneficiary does not match the legal entity, was changed after onboarding, and has no settlement history - the RBI-named third-party laundering pattern",
+    "rounds": 0,
+    "hold_days": 14,
+    "satisfied_internally": 3,
+    "asked_of_merchant": 0,
+    "impossible": [],
+    "events": [
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TP3",
+        "source": "settlement_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TP7",
+        "source": "settlement_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TP1",
+        "source": "kyc_store"
+      },
+      {
+        "round": 0,
+        "event": "stage2",
+        "linkage_hops": 3,
+        "resolved": false,
+        "reason": "beneficiary is not the legal entity - contractual question, documents required"
+      },
+      {
+        "round": 0,
+        "event": "escalate",
+        "reason": "beneficiary does not match the legal entity, was changed after onboarding, and has no settlement history - the RBI-named third-party laundering pattern",
+        "basis": "detection"
+      },
+      {
+        "round": 0,
+        "event": "closed",
+        "outcome": "human_review",
+        "reason": "escalated on detection, without merchant burden: beneficiary does not match the legal entity, was changed after onboarding, and has no settlement history - the RBI-named third-party laundering pattern",
+        "hold_days": 14
+      }
+    ]
+  },
+  {
+    "case_id": "C042",
+    "flag_type": "FLAG_THIRD_PARTY_BENEFICIARY",
+    "outcome": "human_review",
+    "reason": "escalated on detection, without merchant burden: beneficiary does not match the legal entity, was changed after onboarding, and has no settlement history - the RBI-named third-party laundering pattern",
+    "rounds": 0,
+    "hold_days": 14,
+    "satisfied_internally": 3,
+    "asked_of_merchant": 0,
+    "impossible": [],
+    "events": [
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TP3",
+        "source": "settlement_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TP7",
+        "source": "settlement_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "TP1",
+        "source": "kyc_store"
+      },
+      {
+        "round": 0,
+        "event": "stage2",
+        "linkage_hops": 3,
+        "resolved": false,
+        "reason": "beneficiary is not the legal entity - contractual question, documents required"
+      },
+      {
+        "round": 0,
+        "event": "escalate",
+        "reason": "beneficiary does not match the legal entity, was changed after onboarding, and has no settlement history - the RBI-named third-party laundering pattern",
+        "basis": "detection"
+      },
+      {
+        "round": 0,
+        "event": "closed",
+        "outcome": "human_review",
+        "reason": "escalated on detection, without merchant burden: beneficiary does not match the legal entity, was changed after onboarding, and has no settlement history - the RBI-named third-party laundering pattern",
+        "hold_days": 14
+      }
+    ]
+  },
+  {
+    "case_id": "C043",
+    "flag_type": "FLAG_CPV_FAILURE",
+    "outcome": "released",
+    "reason": "internal evidence resolved the flag: a device was couriered to this address and signed for - premises exist and are findable",
+    "rounds": 0,
+    "hold_days": 0,
+    "satisfied_internally": 3,
+    "asked_of_merchant": 0,
+    "impossible": [],
+    "events": [
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "CP6",
+        "source": "kyc_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "CP2",
+        "source": "kyc_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "CP3",
+        "source": "txn_store"
+      },
+      {
+        "round": 0,
+        "event": "stage2",
+        "linkage_hops": 5,
+        "resolved": true,
+        "reason": "a device was couriered to this address and signed for - premises exist and are findable"
+      },
+      {
+        "round": 0,
+        "event": "closed",
+        "outcome": "released",
+        "reason": "internal evidence resolved the flag: a device was couriered to this address and signed for - premises exist and are findable",
+        "hold_days": 0
+      }
+    ]
+  },
+  {
+    "case_id": "C044",
+    "flag_type": "FLAG_CPV_FAILURE",
+    "outcome": "released",
+    "reason": "internal evidence resolved the flag: a device was couriered to this address and signed for - premises exist and are findable",
+    "rounds": 0,
+    "hold_days": 0,
+    "satisfied_internally": 3,
+    "asked_of_merchant": 0,
+    "impossible": [],
+    "events": [
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "CP6",
+        "source": "kyc_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "CP2",
+        "source": "kyc_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "CP3",
+        "source": "txn_store"
+      },
+      {
+        "round": 0,
+        "event": "stage2",
+        "linkage_hops": 5,
+        "resolved": true,
+        "reason": "a device was couriered to this address and signed for - premises exist and are findable"
+      },
+      {
+        "round": 0,
+        "event": "closed",
+        "outcome": "released",
+        "reason": "internal evidence resolved the flag: a device was couriered to this address and signed for - premises exist and are findable",
+        "hold_days": 0
+      }
+    ]
+  },
+  {
+    "case_id": "C045",
+    "flag_type": "FLAG_CPV_FAILURE",
+    "outcome": "released",
+    "reason": "internal evidence resolved the flag: agent GPS was 3.6km from the onboarding coordinates - wrong locality, re-route the visit",
+    "rounds": 0,
+    "hold_days": 0,
+    "satisfied_internally": 3,
+    "asked_of_merchant": 0,
+    "impossible": [],
+    "events": [
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "CP6",
+        "source": "kyc_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "CP2",
+        "source": "kyc_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "CP3",
+        "source": "txn_store"
+      },
+      {
+        "round": 0,
+        "event": "stage2",
+        "linkage_hops": 6,
+        "resolved": true,
+        "reason": "agent GPS was 3.6km from the onboarding coordinates - wrong locality, re-route the visit"
+      },
+      {
+        "round": 0,
+        "event": "closed",
+        "outcome": "released",
+        "reason": "internal evidence resolved the flag: agent GPS was 3.6km from the onboarding coordinates - wrong locality, re-route the visit",
+        "hold_days": 0
+      }
+    ]
+  },
+  {
+    "case_id": "C046",
+    "flag_type": "FLAG_CPV_FAILURE",
+    "outcome": "released",
+    "reason": "internal evidence resolved the flag: agent GPS was 4.5km from the onboarding coordinates - wrong locality, re-route the visit",
+    "rounds": 0,
+    "hold_days": 0,
+    "satisfied_internally": 3,
+    "asked_of_merchant": 0,
+    "impossible": [],
+    "events": [
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "CP6",
+        "source": "kyc_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "CP2",
+        "source": "kyc_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "CP3",
+        "source": "txn_store"
+      },
+      {
+        "round": 0,
+        "event": "stage2",
+        "linkage_hops": 5,
+        "resolved": true,
+        "reason": "agent GPS was 4.5km from the onboarding coordinates - wrong locality, re-route the visit"
+      },
+      {
+        "round": 0,
+        "event": "closed",
+        "outcome": "released",
+        "reason": "internal evidence resolved the flag: agent GPS was 4.5km from the onboarding coordinates - wrong locality, re-route the visit",
+        "hold_days": 0
+      }
+    ]
+  },
+  {
+    "case_id": "C047",
+    "flag_type": "FLAG_CPV_FAILURE",
+    "outcome": "released",
+    "reason": "all requirements satisfied in one round",
+    "rounds": 1,
+    "hold_days": 0,
+    "satisfied_internally": 6,
+    "asked_of_merchant": 3,
+    "impossible": [],
+    "events": [
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "CP6",
+        "source": "kyc_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "CP2",
+        "source": "kyc_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "CP3",
+        "source": "txn_store"
+      },
+      {
+        "round": 0,
+        "event": "stage2",
+        "linkage_hops": 6,
+        "resolved": false,
+        "reason": "no internal record places the merchant at the address"
+      },
+      {
+        "round": 0,
+        "event": "stage1_plan",
+        "mode": "frozen_checklist_simplification"
+      },
+      {
+        "round": 1,
+        "event": "requested",
+        "requirements": [
+          "CP1",
+          "CP4",
+          "CP5"
+        ],
+        "count": 3
+      },
+      {
+        "round": 1,
+        "event": "satisfied",
+        "requirement": "CP1",
+        "source": "merchant_submission"
+      },
+      {
+        "round": 1,
+        "event": "satisfied",
+        "requirement": "CP4",
+        "source": "merchant_submission"
+      },
+      {
+        "round": 1,
+        "event": "satisfied",
+        "requirement": "CP5",
+        "source": "merchant_submission"
+      },
+      {
+        "round": 1,
+        "event": "closed",
+        "outcome": "released",
+        "reason": "all requirements satisfied in one round",
+        "hold_days": 0
+      }
+    ]
+  },
+  {
+    "case_id": "C048",
+    "flag_type": "FLAG_CPV_FAILURE",
+    "outcome": "released",
+    "reason": "all requirements satisfied in one round",
+    "rounds": 1,
+    "hold_days": 0,
+    "satisfied_internally": 6,
+    "asked_of_merchant": 3,
+    "impossible": [],
+    "events": [
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "CP6",
+        "source": "kyc_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "CP2",
+        "source": "kyc_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "CP3",
+        "source": "txn_store"
+      },
+      {
+        "round": 0,
+        "event": "stage2",
+        "linkage_hops": 6,
+        "resolved": false,
+        "reason": "no internal record places the merchant at the address"
+      },
+      {
+        "round": 0,
+        "event": "stage1_plan",
+        "mode": "frozen_checklist_simplification"
+      },
+      {
+        "round": 1,
+        "event": "requested",
+        "requirements": [
+          "CP1",
+          "CP4",
+          "CP5"
+        ],
+        "count": 3
+      },
+      {
+        "round": 1,
+        "event": "satisfied",
+        "requirement": "CP1",
+        "source": "merchant_submission"
+      },
+      {
+        "round": 1,
+        "event": "satisfied",
+        "requirement": "CP4",
+        "source": "merchant_submission"
+      },
+      {
+        "round": 1,
+        "event": "satisfied",
+        "requirement": "CP5",
+        "source": "merchant_submission"
+      },
+      {
+        "round": 1,
+        "event": "closed",
+        "outcome": "released",
+        "reason": "all requirements satisfied in one round",
+        "hold_days": 0
+      }
+    ]
+  },
+  {
+    "case_id": "C049",
+    "flag_type": "FLAG_CPV_FAILURE",
+    "outcome": "released",
+    "reason": "all requirements satisfied in one round",
+    "rounds": 1,
+    "hold_days": 0,
+    "satisfied_internally": 6,
+    "asked_of_merchant": 3,
+    "impossible": [],
+    "events": [
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "CP6",
+        "source": "kyc_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "CP2",
+        "source": "kyc_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "CP3",
+        "source": "txn_store"
+      },
+      {
+        "round": 0,
+        "event": "stage2",
+        "linkage_hops": 6,
+        "resolved": false,
+        "reason": "logins and a deployed device corroborate the address, but CPV needs a completed visit - merchant must supply a landmark or time window"
+      },
+      {
+        "round": 0,
+        "event": "stage1_plan",
+        "mode": "frozen_checklist_simplification"
+      },
+      {
+        "round": 1,
+        "event": "requested",
+        "requirements": [
+          "CP1",
+          "CP4",
+          "CP5"
+        ],
+        "count": 3
+      },
+      {
+        "round": 1,
+        "event": "satisfied",
+        "requirement": "CP1",
+        "source": "merchant_submission"
+      },
+      {
+        "round": 1,
+        "event": "satisfied",
+        "requirement": "CP4",
+        "source": "merchant_submission"
+      },
+      {
+        "round": 1,
+        "event": "satisfied",
+        "requirement": "CP5",
+        "source": "merchant_submission"
+      },
+      {
+        "round": 1,
+        "event": "closed",
+        "outcome": "released",
+        "reason": "all requirements satisfied in one round",
+        "hold_days": 0
+      }
+    ]
+  },
+  {
+    "case_id": "C050",
+    "flag_type": "FLAG_CPV_FAILURE",
+    "outcome": "released",
+    "reason": "all requirements satisfied in one round",
+    "rounds": 1,
+    "hold_days": 0,
+    "satisfied_internally": 6,
+    "asked_of_merchant": 3,
+    "impossible": [],
+    "events": [
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "CP6",
+        "source": "kyc_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "CP2",
+        "source": "kyc_store"
+      },
+      {
+        "round": 0,
+        "event": "satisfied",
+        "requirement": "CP3",
+        "source": "txn_store"
+      },
+      {
+        "round": 0,
+        "event": "stage2",
+        "linkage_hops": 5,
+        "resolved": false,
+        "reason": "logins and a deployed device corroborate the address, but CPV needs a completed visit - merchant must supply a landmark or time window"
+      },
+      {
+        "round": 0,
+        "event": "stage1_plan",
+        "mode": "frozen_checklist_simplification"
+      },
+      {
+        "round": 1,
+        "event": "requested",
+        "requirements": [
+          "CP1",
+          "CP4",
+          "CP5"
+        ],
+        "count": 3
+      },
+      {
+        "round": 1,
+        "event": "satisfied",
+        "requirement": "CP1",
+        "source": "merchant_submission"
+      },
+      {
+        "round": 1,
+        "event": "satisfied",
+        "requirement": "CP4",
+        "source": "merchant_submission"
+      },
+      {
+        "round": 1,
+        "event": "satisfied",
+        "requirement": "CP5",
+        "source": "merchant_submission"
+      },
+      {
+        "round": 1,
+        "event": "closed",
+        "outcome": "released",
+        "reason": "all requirements satisfied in one round",
+        "hold_days": 0
+      }
+    ]
+  }
+]

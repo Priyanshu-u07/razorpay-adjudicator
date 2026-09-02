@@ -1,0 +1,35 @@
+[INTERNAL] Pull the full daily transaction volume and value history for all 8 months, and mark exactly which days crossed the 7x median line and by how much.
+[INTERNAL] Recompute the median itself, checking whether the baseline was set during a slow ramp-up period that makes a normal busy week look like a 7x jump.
+[INTERNAL] Break the spike days down hour by hour, to see if the extra volume came in a steady business-hours flow or in sudden bursts at odd hours.
+[INTERNAL] Check the average ticket size on spike days against normal days, since more customers looks very different from the same customers paying much larger amounts.
+[INTERNAL] Count unique cards, unique payers and unique VPAs on the spike days, and check how many were repeat customers already seen in earlier months.
+[INTERNAL] Check for card or VPA repetition patterns, such as one card used many times or a small set of cards driving most of the spike.
+[INTERNAL] Look at the payment method mix on spike days (UPI, cards, netbanking, wallets) against the merchant's normal mix, and flag any sharp change.
+[INTERNAL] Check which terminals, QR codes, payment links or API keys the spike traffic came through, and whether any of them were newly created or newly activated.
+[INTERNAL] Review payer geography and IP or device spread on spike days against the merchant's usual customer footprint.
+[INTERNAL] Check the device and terminal telemetry, including any fault logs, restarts or configuration changes around the start of the spike.
+[INTERNAL] Check connectivity and uptime records for the merchant's terminals, to rule out a backlog of offline transactions being pushed through in one batch.
+[INTERNAL] Check whether any settlement or capture failure earlier in the period caused delayed transactions to land together and create an artificial spike.
+[INTERNAL] Pull the chargeback, dispute and refund history for the whole 8 months, and specifically for the spike days, since a genuine sales surge and a fraud burst behave very differently here.
+[INTERNAL] Check the refund rate and refund timing on spike-day transactions, watching for quick full-value reversals that suggest testing or laundering.
+[INTERNAL] Check authorisation decline rates and failed attempt patterns on the spike days, since heavy card testing shows up as a wall of declines.
+[INTERNAL] Check the issuer-side fraud reports or network alerts, if any, tied to cards transacting on this account.
+[INTERNAL] Pull the settlement history and confirm whether beneficiary bank account details were changed at any point close to the spike.
+[INTERNAL] Review the onboarding file already on record: KYC documents, CIN, PAN, GST details, declared business model, expected monthly turnover and average ticket size.
+[INTERNAL] Compare the actual spike volume against the turnover the merchant declared at onboarding, to see how far outside the declared range it really sits.
+[INTERNAL] Check whether the transaction descriptors, product categories or item details still match MCC 5399, or drift towards a different and higher-risk category.
+[INTERNAL] Check all other merchant IDs, terminals and accounts linked to the same entity, directors, PAN, GST, bank account, email, phone or device, and see whether volume simply moved from one of them to this one.
+[INTERNAL] Check whether any linked account has an existing risk decision, hold or termination against it.
+[INTERNAL] Pull any earlier risk reviews, alerts or holds on this same account, along with what evidence was submitted then and what was concluded.
+[INTERNAL] Pull the support ticket and communication history, since merchants often announce a sale, a campaign or a new sales channel to support before the volume arrives.
+[INTERNAL] Check billing, rental and inventory records for recently issued terminals, QR standees or new integration credentials that would explain added capacity.
+[INTERNAL] Check the merchant's API and integration logs for any new plugin, platform or aggregator route switched on just before the spike.
+[INTERNAL] Check whether the spike period overlaps a festival, sale event or seasonal peak that lifted comparable MCC 5399 merchants on the platform, using portfolio-level data.
+[INTERNAL] Check whether the spike has continued, flattened or stopped since the hold was placed, as the shape after day four is itself evidence.
+[ASK] A plain explanation from the merchant of what caused the volume increase, with the specific event, campaign or channel named and dated. This is the one thing no internal record can supply, and it separates a genuine business reason from an account being misused.
+[ASK] Only if internal records show a new sales channel, platform or integration appearing just before the spike: confirmation of what that channel is and who operates it, to rule out the account being used to process another party's transactions.
+[ASK] Only if internal checks find no matching campaign, festival, terminal addition or channel change to explain the rise: sample invoices, purchase orders or supplier bills covering the spike days, to test whether real goods actually moved against these payments.
+[ASK] Only if the transaction data shows large-ticket or concentrated payments from a few payers: identification of those counterparties and the nature of the dealing, to rule out related-party or circular fund movement.
+[ASK] Only if descriptors, item details or ticket sizes suggest activity outside general merchandise: a current description of goods sold, to test whether the business has drifted away from MCC 5399 and needs recategorisation rather than a fraud hold.
+[ASK] Only if internal records show the settlement bank account was changed near the spike: confirmation of the change from an authorised signatory, to rule out account takeover.
+[ASK] Only if the transaction inflow far exceeds the declared turnover and no operational explanation is found internally: recent bank statements or GST returns covering the spike period, to check that the payment inflow matches the declared business.

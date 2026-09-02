@@ -1,0 +1,52 @@
+[INTERNAL] Full chargeback and dispute log for the last 12 months, with date, amount, card network, issuer, reason code, and outcome for each case
+[INTERNAL] Month-by-month chargeback rate calculated both by count and by value, so it is clear whether 2.1% is a spike in one month or a steady level
+[INTERNAL] Breakdown of chargebacks by reason code group — fraud (unauthorised use) versus service issues (goods not received, not as described, cancelled subscription, duplicate charge)
+[INTERNAL] Total transaction count and value per month for the full 22 months, to confirm the denominator used in the rate is correct
+[INTERNAL] Card network scheme alerts and fraud reports already received (Visa VAMP/VDMP, Mastercard ECP/ECM notices), including whether the merchant is in any monitoring programme
+[INTERNAL] Refund rate and refund timing data, to check whether the merchant refunds slowly and customers go to their bank instead
+[INTERNAL] Representment (dispute defence) history — how many cases the merchant contested, how many were won, and how many went unanswered
+[INTERNAL] Concentration analysis: how much of the chargeback volume comes from a small number of buyers, cards, BINs, IP addresses, device IDs, or shipping addresses
+[INTERNAL] Transaction mix by channel — card-present terminal, online checkout, payment links, subscriptions/standing instructions — and the chargeback rate within each channel
+[INTERNAL] Ticket size distribution and any recent change in average ticket size or sudden volume growth compared with earlier months
+[INTERNAL] Comparison of actual transaction pattern against the declared MCC 5651 (apparel), to test for possible business activity outside the declared category
+[INTERNAL] Existing KYC file — Certificate of Incorporation, PAN of the company, MOA/AOA, CIN, GSTIN, registered address proof, and directors' PAN and Aadhaar/ID
+[INTERNAL] Current list of directors and beneficial owners on file, and whether it still matches MCA records
+[INTERNAL] Settlement bank account details on file and the record of any change to those details during the account's life
+[INTERNAL] All prior risk reviews, warning letters, reserve decisions, or settlement holds applied to this merchant
+[INTERNAL] Customer support and complaint tickets received by the aggregator about this merchant, including any escalations from issuing banks
+[INTERNAL] Terminal telemetry and device logs for card-present activity — terminal IDs, locations, unusual hours, repeated failed attempts, high decline rates
+[INTERNAL] Authorisation decline and retry patterns, including card testing signatures such as many small-value attempts on sequential card numbers
+[INTERNAL] Website or app details captured at onboarding, including URLs, and whether the site is still live and matches what was declared
+[INTERNAL] Screenshots or archived copies of the merchant's checkout page, refund policy, and terms as captured during onboarding, for comparison with the current site
+[INTERNAL] Whether the merchant uses 3D Secure/OTP authentication on online transactions and the share of transactions that were authenticated versus unauthenticated
+[INTERNAL] Record of any earlier promise or undertaking by the merchant to reduce disputes, and whether it was met
+[ASK] A written explanation from the merchant of what caused the rise in chargebacks, with specific dates and events
+[ASK] A dated, time-bound action plan setting out the steps the merchant will take to bring the rate below the acceptable threshold, with a named person responsible
+[ASK] Case-by-case evidence for a sample of disputed transactions selected by the aggregator — order confirmation, invoice, payment record, customer contact details, and delivery proof
+[ASK] Proof of delivery for disputed orders — courier name, AWB/tracking number, delivery scan, and signature or OTP confirmation where available
+[ASK] Copies of customer communication for disputed orders — emails, WhatsApp or SMS threads, and support ticket records
+[ASK] The merchant's own refund register for the last 12 months, showing refund requests received, dates processed, and amounts
+[ASK] Current published refund, return, exchange, cancellation, and shipping policies as displayed to customers, with the URL and effective date
+[ASK] The customer grievance redressal process, including the name, email, and phone number of the grievance officer and the response timelines offered
+[ASK] The billing descriptor that appears on the customer's card statement, and confirmation that it clearly identifies the merchant's brand
+[ASK] Details of the product catalogue actually being sold, with sample listings and prices, to confirm it fits apparel under MCC 5651
+[ASK] Confirmation of all sales channels in use — own website, marketplaces, social media, physical stores, payment links, WhatsApp orders — with URLs and handles
+[ASK] Details of any dropshipping, third-party fulfilment, reseller, or supplier arrangements, including supplier names and contracts
+[ASK] Details of any subscription, auto-renewal, free trial, or recurring billing offers, including how consent is taken and how customers cancel
+[ASK] Inventory and dispatch records or a stock statement for the review period, to show goods actually existed and were shipped
+[ASK] Courier and logistics partner agreements, and service reports showing delivery success and return-to-origin rates
+[ASK] Bank statements of the settlement account for the last 6 to 12 months
+[ASK] Latest audited financial statements, and GST returns (GSTR-1 and GSTR-3B) for the last 12 months, to reconcile declared sales with processed volume
+[ASK] Updated KYC documents if anything has changed — registered address, directors, shareholding, bank account, or authorised signatory
+[ASK] A board resolution or authority letter confirming who is authorised to respond to this review on behalf of the company
+[ASK] Declaration of any other payment aggregator, gateway, or acquiring bank relationships, past or present, and whether any of them terminated or restricted the merchant
+[ASK] Confirmation of whether the merchant has ever appeared on a network terminated merchant file (MATCH/TMF) and, if so, the details
+[ASK] Details of marketing and advertising practices during the spike period — discount campaigns, influencer promotions, ad creatives — since misleading ads often drive disputes
+[ASK] Details of any data breach, account takeover, unauthorised access, or website compromise affecting the merchant's systems
+[ASK] Description of the fraud controls in place at checkout — velocity limits, address verification, OTP/3DS, blacklists, manual review of high-value orders
+[ASK] Whether the merchant uses any dispute prevention or alert service (such as Ethoca or Verifi) and, if not, agreement to adopt one
+[ASK] Explanation and supporting documents for any high-value, bulk, or unusual orders identified by the aggregator in the transaction sample
+[ASK] A signed undertaking acknowledging the chargeback threshold, agreeing to a monitoring period, and accepting a rolling reserve or other risk control if imposed
+[ASK] Confirmation of whether the merchant will accept a temporary volume cap or ticket-size cap while the rate comes down
+[INTERNAL] The aggregator's own recalculation of the rate after excluding any duplicate, reversed, or wrongly coded disputes, to confirm the 2.1% figure is accurate
+[INTERNAL] Assessment against the aggregator's board-approved risk policy and RBI Payment Aggregator directions on merchant onboarding and monitoring, recording the decision, the reasoning, and the approver, so the file stands up to audit or inspection

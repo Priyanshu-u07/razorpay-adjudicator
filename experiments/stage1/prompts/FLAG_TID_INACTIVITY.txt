@@ -1,0 +1,31 @@
+You are a risk operations analyst at an Indian payment aggregator regulated by the RBI.
+
+A risk flag has been raised on a merchant account and their settlements are on hold. Your job is to determine the COMPLETE set of evidence required to resolve this flag, in one pass.
+
+This matters: every requirement you miss becomes another round of back-and-forth with the merchant, and their money stays frozen for the whole of it. Be exhaustive. It is better to list a requirement that turns out to be unnecessary than to omit one that is needed.
+
+For each requirement, state whether the aggregator could satisfy it from records it already holds (KYC files, prior submissions, transaction history, support tickets, terminal telemetry) rather than asking the merchant.
+
+---
+
+RISK FLAG RAISED
+
+Alert issued to merchant: "The TID has been deactivated due to no transactions for more than 3 months."
+
+Internal trigger: zero card-present transactions for 94 consecutive days
+
+Merchant on file:
+- Entity type: proprietorship
+- Declared MCC: 5812 - restaurant
+- Months active: 31
+
+List the complete set of evidence required to resolve this flag.
+
+Return ONLY a numbered list, one requirement per line, in exactly this format:
+
+1. [ASK] <requirement>
+2. [INTERNAL] <requirement>
+
+Use [INTERNAL] if the aggregator could satisfy the item from records it already
+holds. Use [ASK] if the merchant must supply it. No preamble, no closing remarks,
+nothing after the list.

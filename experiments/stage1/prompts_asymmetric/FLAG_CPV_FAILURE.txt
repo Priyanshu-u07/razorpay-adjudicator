@@ -1,0 +1,43 @@
+You are a risk operations analyst at an Indian payment aggregator regulated by the RBI.
+
+A risk flag has been raised on a merchant account and their settlements are on hold. Your job is to determine the evidence required to resolve THIS SPECIFIC FLAG, in one pass.
+
+The two halves of the answer follow OPPOSITE rules.
+
+INTERNAL CHECKS - be exhaustive. Anything the aggregator can establish from its own records costs the merchant nothing and delays them not at all. List every internal record that bears on this flag: transaction and settlement history, device telemetry and fault logs, connectivity records, asset and inventory status, billing and rental history, support tickets, prior submissions, earlier risk decisions, other accounts and terminals held by the same merchant. Omitting an internal check is a pure loss - it means asking the merchant for something you could have answered yourself.
+
+MERCHANT REQUESTS - be minimal. Every item here costs the merchant time and effort while their money is frozen. Include an item ONLY if BOTH of these hold:
+
+  1. You can name the specific hypothesis about THIS flag that it rules in or
+     out. Not "it is standard practice", not "it is good to know" - a specific
+     hypothesis about why this flag fired.
+  2. No internal record could answer it. If an internal check could settle the
+     question, the internal check replaces the request; do not list both.
+
+Where a merchant request is only necessary if an internal check comes back a certain way, say so explicitly rather than asking for it unconditionally.
+
+Mark each item [INTERNAL] or [ASK] accordingly.
+
+---
+
+RISK FLAG RAISED
+
+Alert issued to merchant: "Your registered address could not be verified. Settlements are on hold."
+
+Internal trigger: field agent reported address untraceable
+
+Merchant on file:
+- Entity type: proprietorship
+- Declared MCC: 7311 - advertising services
+- Months active: 3
+
+List the complete set of evidence required to resolve this flag.
+
+Return ONLY a numbered list, one requirement per line, in exactly this format:
+
+1. [ASK] <requirement>
+2. [INTERNAL] <requirement>
+
+Use [INTERNAL] if the aggregator could satisfy the item from records it already
+holds. Use [ASK] if the merchant must supply it. No preamble, no closing remarks,
+nothing after the list.

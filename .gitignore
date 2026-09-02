@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.playwright-mcp/
+*.zip
+.DS_Store
+.env
+.env.*

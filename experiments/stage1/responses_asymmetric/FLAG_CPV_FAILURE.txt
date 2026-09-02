@@ -1,0 +1,30 @@
+[INTERNAL] Pull the exact address string captured at onboarding, including house/shop number, floor, street, landmark, area, city, state and PIN code, and check whether any of these fields are blank, truncated or clearly mistyped.
+[INTERNAL] Pull the map coordinates (latitude/longitude) recorded for the merchant at onboarding, if any were captured.
+[INTERNAL] Pull the field agent's visit report in full: date, time of day, GPS location the agent actually stood at, photos taken, people spoken to, and the agent's written remarks.
+[INTERNAL] Compare the agent's GPS location against the onboarding coordinates and PIN code to see whether the agent went to the correct locality at all.
+[INTERNAL] Check how many visit attempts were made, and whether the single visit fell outside normal working hours, on a Sunday, or on a public holiday.
+[INTERNAL] Check whether the agent tried to phone the merchant during the visit, and whether that call was answered, unanswered or the number was unreachable.
+[INTERNAL] Check the PIN code and locality against a postal or address database to see whether the area itself is one with unnumbered or informal addressing, where "untraceable" is a normal outcome.
+[INTERNAL] Retrieve every address proof already submitted at onboarding: Aadhaar, utility bill, rent or lease agreement, property tax receipt, Udyam certificate, Shop and Establishment licence.
+[INTERNAL] Compare the address written on those onboarding proofs word for word against the address stored in the system, to see whether a data entry error created a wrong address in the records.
+[INTERNAL] Retrieve the PAN and the proprietor's KYC record and check the address printed there.
+[INTERNAL] Retrieve the GST registration details on file, if GST was collected, and check the principal place of business address recorded there.
+[INTERNAL] Retrieve the bank account verification record (penny drop or cancelled cheque) and any bank statement already held, and check the address shown on it.
+[INTERNAL] Check whether a welcome kit, POS device, card reader, QR standee or any physical item was ever couriered to the registered address, and pull the courier's delivery confirmation and delivery signature.
+[INTERNAL] Check the asset register for any terminal or device assigned to this merchant, its recorded installation address, and its rental or billing history.
+[INTERNAL] Pull connectivity and fault logs for any assigned device, including the network location and cell or IP data from which it last transacted.
+[INTERNAL] Pull dashboard login logs for the three months of activity: IP addresses, device fingerprints and the approximate locations they map to, and check whether they cluster near the declared address.
+[INTERNAL] Pull the full transaction history for the three months: volume, ticket sizes, timing patterns, and whether the pattern fits an advertising services business or looks unrelated to the declared MCC.
+[INTERNAL] Pull the chargeback, refund, dispute and customer complaint record for the account, since a clean record makes a shell or fake merchant far less likely.
+[INTERNAL] Pull the settlement history and confirm how many settlements were already paid out successfully to the same bank account before this hold.
+[INTERNAL] Pull all support tickets, emails and chat records to see whether the merchant already reported a shift of premises, a correction to the address, or a wrong address in the system.
+[INTERNAL] Check whether any earlier address verification, physical visit or risk review was completed on this merchant and what its outcome was.
+[INTERNAL] Check whether the same PAN, phone number, email address or bank account is linked to any other merchant account or terminal on the platform, and what address those accounts carry.
+[INTERNAL] Check whether any other merchant on the platform is registered at the same address, and whether that address has any past negative history.
+[INTERNAL] Run the merchant, proprietor and address against internal negative lists, dedupe lists and any prior fraud markers.
+[INTERNAL] Retrieve the website, domain or business profile link submitted at onboarding and check the contact address published on it against the address on file.
+[INTERNAL] Confirm whether the registered phone number and email are still live and verified through recent OTP or communication logs, since a contactable merchant points to a bad address record rather than a vanished business.
+[ASK] Only if the internal records show the stored address is incomplete, mistyped, or in an area with informal addressing: a nearby landmark and simple directions to the premises, so a fresh visit can be routed correctly. This tests the hypothesis that the business exists but the written address is not findable on the ground.
+[ASK] Only if the internal records show no usable address proof on file, or show that the proof on file carries a different address from the one in the system: one current address proof in the proprietor's or firm's name, such as a utility bill, rent agreement or Shop and Establishment licence. This tests the hypothesis that the merchant never had a valid address record to begin with.
+[ASK] Only if the bank, GST, KYC or website addresses in the internal records point to a different location than the one visited: written confirmation of the current working address and the date the merchant moved. This tests the hypothesis that the merchant relocated and did not update the records.
+[ASK] Only if the internal records show the business is run from home or a shared or co-working space with no signage: a geotagged photo of the working premises and a two hour window when someone will be present, so a revisit can succeed. This tests the hypothesis that the agent reached the right place but found nothing identifying the merchant.

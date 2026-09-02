@@ -1,0 +1,26 @@
+TI1 CHECK
+answer this from the aggregator's own records, always
+
+TI2 CHECK
+answer this from the aggregator's own records, always
+
+TI3 ASK_IF device_deployed
+
+TI4 ASK_IF not (open_hardware_ticket or device_fault_code)
+
+TI5 ASK
+
+TI6 CHECK
+answer this from the aggregator's own records, always
+
+TI7 CHECK
+answer this from the aggregator's own records, always
+
+TI8 CHECK
+answer this from the aggregator's own records, always
+
+TI9 CHECK
+answer this from the aggregator's own records, always
+
+TI10 CHECK
+answer this from the aggregator's own records, always

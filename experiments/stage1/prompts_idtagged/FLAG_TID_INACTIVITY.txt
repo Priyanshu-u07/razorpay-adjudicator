@@ -1,0 +1,69 @@
+You are a risk operations analyst at an Indian payment aggregator regulated by the RBI.
+
+A risk flag has been raised on a merchant account and their settlements are on hold. Your aggregator maintains a REQUIREMENT LIBRARY for each flag type. Your job is to turn that library into an adjudication plan for this flag type: decide, for each requirement, whether it is answered from the aggregator's own records, asked of the merchant, asked only under a specific condition, or not needed.
+
+The two halves of the plan follow OPPOSITE rules.
+
+INTERNAL CHECKS - be exhaustive. Anything the aggregator can establish from its own records costs the merchant nothing and delays them not at all. Omitting an internal check is a pure loss - it means asking the merchant for something you could have answered yourself.
+
+MERCHANT REQUESTS - be minimal. Every item asked costs the merchant time and effort while their money is frozen. Ask unconditionally ONLY if no internal record could ever answer it. Where a request is only necessary if an internal check comes back a certain way, gate it on that condition instead of asking outright.
+
+---
+
+RISK FLAG TYPE
+
+Alert issued to merchant: "The TID has been deactivated due to no transactions for more than 3 months."
+
+Internal trigger: zero card-present transactions for 90+ consecutive days
+
+Merchant profile for this flag type: small proprietorships and private limited companies with a deployed POS terminal.
+
+---
+
+INTERNAL FINDINGS AVAILABLE
+
+After its internal checks run, the aggregator's systems can answer these yes/no questions about any case. These are the ONLY terms you may use inside a condition:
+
+  open_hardware_ticket        an unresolved hardware complaint exists for this merchant
+  device_fault_code           the terminal itself has reported a hardware fault
+  device_network_registered   the terminal is registered on the mobile network
+  device_heartbeat_recent     the terminal has pinged home within the last 7 days
+  device_deployed             the asset register still shows the device with this merchant
+  rental_billing_active       terminal rental charges are still being billed and paid
+  other_channel_active        the merchant is transacting on another channel of ours (UPI QR, links)
+  prior_cases_exist           an earlier risk case exists for this merchant
+
+---
+
+REQUIREMENT LIBRARY - FLAG_TID_INACTIVITY
+
+  TI1   Any open or recently closed service tickets on this terminal's hardware
+  TI2   Terminal health, heartbeat or connectivity logs for the inactive period
+  TI3   Merchant confirmation of physical possession and location of the device
+  TI4   Reason for inactivity if not hardware related - seasonal closure, relocation, channel shift
+  TI5   Whether the merchant wants reactivation or replacement hardware
+  TI6   Other terminals on the same MID and their activity status
+  TI7   Terminal error and decline logs - were transactions attempted and failing, rather than never attempted?
+  TI8   SIM and connectivity records for the device - data usage, SIM status, last network registration
+  TI9   Device asset record - still deployed to this merchant, or recovered into stock?
+  TI10  Terminal rental and MDR invoice history - did rentals keep debiting, and did they bounce?
+
+---
+
+OUTPUT FORMAT - follow it exactly, one line per requirement, all ten ids, no preamble, nothing after the last line:
+
+  <id> CHECK
+      answer this from the aggregator's own records, always
+
+  <id> ASK
+      ask the merchant unconditionally - no internal record could ever answer it
+
+  <id> ASK_IF <condition>
+      ask the merchant only if the condition is true after the internal checks
+      run. The condition may use ONLY the finding names listed above, combined
+      with: and, or, not, parentheses.
+
+  <id> SKIP - <short reason>
+      not needed for this flag type
+
+After the ten lines you may add nothing.

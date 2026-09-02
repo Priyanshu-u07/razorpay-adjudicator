@@ -1,0 +1,56 @@
+[INTERNAL] Full transaction history for all 14 months, exported with date, time, amount, payment mode, and success or failure status for every transaction
+[INTERNAL] Ticket size distribution broken down month by month, showing average, median, highest, lowest, and the spread of values, so the exact shape of the mismatch is documented
+[INTERNAL] The specific descriptor text strings sent on the merchant's transactions, pulled from the payment gateway logs, along with a record of every time that descriptor was changed
+[INTERNAL] The declared MCC 5941 on file and the date it was assigned, plus any earlier MCC the account carried before it
+[INTERNAL] The original onboarding application form filled by the merchant, including the business description they wrote in their own words at signup
+[INTERNAL] Complete KYC file already held: PAN of the proprietor, Aadhaar or other address proof, proprietorship proof such as GST certificate or Udyam registration or shop and establishment licence
+[INTERNAL] Bank account proof already on file, being the cancelled cheque or bank statement used to register the settlement account, and confirmation the account name matches the proprietor
+[INTERNAL] Website or app URL captured at onboarding, plus any screenshots or archived copies of the site taken by the onboarding team at that time
+[INTERNAL] Records of any earlier risk flags, chargeback alerts, or fraud reports raised on this account in the past 14 months
+[INTERNAL] Full chargeback and dispute history with reason codes, and the current chargeback ratio as a percentage of total transactions
+[INTERNAL] Refund history, including refund rate, timing of refunds, and any pattern of large or unusual refunds
+[INTERNAL] All past support tickets raised by or about this merchant, especially customer complaints describing what they actually bought
+[INTERNAL] Terminal or POS telemetry if a physical terminal was issued: device location, IP addresses used, device fingerprints, and whether transactions came from one place or many
+[INTERNAL] Settlement history showing amounts paid out, dates, and the exact date and reason the current hold was applied
+[INTERNAL] Card-not-present versus card-present split, and the mix of payment methods used such as cards, UPI, net banking, or wallets
+[INTERNAL] Geographic spread of the customers who paid this merchant, including any share of international transactions
+[INTERNAL] Comparison data showing what a normal ticket size range and descriptor pattern looks like for other merchants under MCC 5941 on the platform, so the deviation can be measured against a real baseline
+[INTERNAL] Any negative-list, watchlist, or adverse media screening already run on the proprietor and the business name at onboarding
+[INTERNAL] Record of whether the merchant was onboarded directly or through a reseller, referral partner, or sub-merchant arrangement, and details of that partner
+[INTERNAL] Velocity data showing transaction volume per hour and per day, to see if there are unusual bursts
+[INTERNAL] Count and list of repeat customers versus one-time customers, and whether the same card or account was used many times
+[ASK] A written explanation from the merchant describing exactly what goods or services they sell today, in plain detail, listing the main product categories
+[ASK] Confirmation from the merchant of whether their business activity has changed since onboarding, and if so, when it changed and why they did not inform the aggregator
+[ASK] A current, complete product catalogue or price list showing item names and prices, which should explain the ticket sizes being seen
+[ASK] An explanation of the descriptor text appearing on customer statements, including why it was chosen and whether it matches the trading name customers recognise
+[ASK] Sample invoices or bills for at least 15 to 20 recent transactions, chosen by the aggregator to cover the highest, lowest, and most common ticket sizes
+[ASK] Purchase invoices from the merchant's own suppliers, showing they actually buy the sporting goods they claim to sell
+[ASK] Supplier or vendor list with names, contact details, and the nature of goods supplied
+[ASK] Proof of stock or inventory, such as a stock register, warehouse photographs, or godown rent agreement
+[ASK] Photographs of the business premises, showing the shop front with signage, the interior, and the goods on display
+[ASK] Current rent agreement, ownership document, or utility bill for the business premises, dated recently
+[ASK] Live or current website, app, and social media links, plus screenshots of the product pages, checkout page, and payment page as they appear today
+[ASK] The website's terms and conditions, refund and cancellation policy, shipping policy, privacy policy, and contact us page
+[ASK] Shipping and delivery proof for a sample of transactions, such as courier airway bill numbers, delivery partner name, and proof of delivery
+[ASK] The name and details of the logistics or courier partner used, and any agreement with them
+[ASK] GST returns filed for the last 12 months, specifically GSTR-1 and GSTR-3B, showing declared sales and the HSN codes of goods sold
+[ASK] Income tax return of the proprietor for the last completed financial year, with computation of income
+[ASK] Bank statements for the settlement account for the full 14-month period, in PDF format directly from the bank, so credits from the aggregator can be matched against declared sales
+[ASK] Bank statements for any other current account used for the business, if settlements or business receipts flow anywhere else
+[ASK] Audited or self-certified financial statements, being the profit and loss account and balance sheet, if available for the last financial year
+[ASK] A written declaration on the merchant's letterhead confirming they do not sell any product or service that falls under the aggregator's prohibited or restricted list
+[ASK] Confirmation of whether the merchant is selling on behalf of any third party, aggregating payments for others, or allowing anyone else to use their payment account, and full details if so
+[ASK] Details of any additional business lines, brands, or sister concerns operated by the same proprietor under the same or a different name
+[ASK] Copies of any licences or approvals needed for the goods actually being sold, if the real activity turns out to need them, for example a drug licence, FSSAI licence, or arms licence for air guns and similar sporting items
+[ASK] An updated Udyam registration or shop and establishment certificate if the business activity listed on it has changed
+[ASK] Confirmation of the correct MCC the merchant believes applies to their business, with reasons
+[ASK] A signed request for MCC change or business category update, if the merchant accepts that the current MCC is wrong
+[ASK] Explanation for any specific outlier transactions the aggregator points out, such as unusually high value payments or repeated identical amounts
+[ASK] Customer contact details for a small sample of transactions, so the aggregator can independently verify what was sold, subject to the merchant's consent and privacy rules
+[ASK] Fresh KYC refresh documents if the existing ones are older than the aggregator's re-KYC cycle, including a recent photograph of the proprietor and a self-declaration of current address
+[ASK] A written undertaking that the merchant will inform the aggregator in advance of any future change in business activity, product mix, or website content
+[INTERNAL] Merchant agreement signed at onboarding, to check which clauses on business category, prohibited goods, and change notification have been breached
+[INTERNAL] Record of the alert sent to the merchant, the date it was sent, and all communication exchanged after it
+[INTERNAL] A written internal risk assessment note summarising findings, the money currently held, the age of the hold, and a recommendation, kept on file for RBI audit purposes
+[INTERNAL] Check on whether the case crosses the threshold for a suspicious transaction report to FIU-IND, and the decision recorded with reasons either way
+[INTERNAL] Confirmation that the settlement hold period is within the timelines allowed under RBI payment aggregator rules and the merchant agreement, with an escalation note if it is being exceeded

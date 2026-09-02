@@ -1,0 +1,44 @@
+[INTERNAL] Pull the merchant's onboarding KYC file and note the exact legal name of the partnership firm as recorded at sign-up.
+[INTERNAL] Pull the cancelled cheque or bank proof submitted at onboarding and compare its account holder name and account number with the current settlement beneficiary on file.
+[INTERNAL] Check the beneficiary account change audit log — when the account was added or edited, by which user login, from which IP address, device and location.
+[INTERNAL] Check whether the change was made through the merchant dashboard, by a support agent, or through an API call, and retrieve the ticket or request that authorised it.
+[INTERNAL] Re-run the penny-drop (bank account name check) on the current beneficiary account and record the exact name the bank returns.
+[INTERNAL] Retrieve the penny-drop result captured at onboarding for the original account and compare the two returned names.
+[INTERNAL] Check the bank return or rejection code on any failed settlement credit to this account (name mismatch, account closed, account frozen, invalid account).
+[INTERNAL] Check whether the beneficiary account is a current account or a savings account, from the account number series and bank response.
+[INTERNAL] Check whether this same beneficiary account number is linked to any other merchant ID on the platform.
+[INTERNAL] Check whether the merchant's registered email, mobile number or password was changed in the days before the beneficiary account was changed.
+[INTERNAL] Check login telemetry for the account — new devices, new browsers, unusual login times, logins from a country or city not seen before.
+[INTERNAL] Pull the full settlement history for the six months and confirm which settlements went to the old account and which were attempted to the new one.
+[INTERNAL] Pull the transaction history and look for sudden spikes in volume, ticket size, or number of transactions just before the account change.
+[INTERNAL] Check the chargeback ratio, dispute ratio and refund ratio against the platform threshold.
+[INTERNAL] Check the customer complaint and support ticket history for this merchant, including complaints of goods not delivered.
+[INTERNAL] Check whether the actual transaction pattern matches MCC 5045 (computers and peripherals) or looks like a different, possibly higher-risk, line of business.
+[INTERNAL] Verify the firm's PAN through the income tax verification service and compare the name returned with the name on file.
+[INTERNAL] Verify the GSTIN on file through the GST portal and note both the legal name and the trade name it returns.
+[INTERNAL] Check the Registrar of Firms record (where the firm is registered) for the firm name and current list of partners.
+[INTERNAL] Screen the firm, all partners and the beneficiary account holder against sanctions lists, the RBI caution list, and internal and external negative databases.
+[INTERNAL] Check the merchant agreement clause on settlement accounts and confirm what the merchant contractually agreed to.
+[INTERNAL] Check the merchant's website or app snapshot taken at onboarding and confirm it is still live and still selling the declared goods.
+[INTERNAL] Check whether any earlier risk flag, hold, or warning was raised on this merchant in the six months it has been active.
+[ASK] A written explanation on the firm's letterhead, signed by a partner, stating why the beneficiary account name is different from the legal entity name.
+[ASK] A cancelled cheque of the settlement account clearly showing the printed account holder name, account number and IFSC code.
+[ASK] A bank statement of the settlement account for the last three to six months, either on bank letterhead or as a bank-generated PDF, showing the account holder name and account number.
+[ASK] A bank account confirmation letter or account details certificate issued by the bank branch on its letterhead, stamped and signed.
+[ASK] The complete partnership deed, including any later amendment or reconstitution deed, showing the firm name, all partners and their shares.
+[ASK] The certificate of registration from the Registrar of Firms, if the firm is registered.
+[ASK] The PAN card of the partnership firm.
+[ASK] The GST registration certificate showing both legal name and trade name.
+[ASK] A trade name proof such as the Shops and Establishment licence, Udyam registration, or municipal trade licence, if the bank account is in a brand or trade name.
+[ASK] A letter of authority or resolution signed by all partners, authorising this specific bank account to receive settlements and naming the person authorised to request account changes.
+[ASK] Identity and address proof of the partner who signs the authority letter, so the signature and identity can be matched.
+[ASK] Confirmation from the merchant, in writing, that the beneficiary account belongs to the firm itself and not to a partner personally, a group company, an agent, or any other third party.
+[ASK] If the firm's name has changed, the name change document and a bank letter confirming the account name was updated to match.
+[ASK] If the account is held in a partner's personal name, a fresh current account in the firm's name, since settlements to a third-party account are not permitted.
+[ASK] Confirmation of who requested the beneficiary account change, on what date, and through which channel, so it can be matched against the audit log.
+[ASK] Sample purchase invoices from suppliers and sample sales invoices, to confirm the business is genuinely dealing in computers and peripherals.
+[ASK] Current business address proof, such as a registered rent agreement or a recent utility bill in the firm's or landlord's name.
+[ASK] The latest income tax return and financial statements of the firm, or GST returns for the last six months, showing turnover in line with settlement volumes.
+[ASK] Details of the ultimate beneficial owners of the firm, with their identity documents.
+[ASK] A live video verification call with the authorised partner, holding original identity documents and the bank passbook or cheque.
+[ASK] A signed declaration that the merchant is not settling funds on behalf of any other business and is not sharing its payment account with a third party.

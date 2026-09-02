@@ -1,0 +1,32 @@
+[ASK] A written explanation from the merchant of the business reason for the volume spike (for example: a sale, festival season, a new product launch, a large bulk order, or a marketing campaign).
+[ASK] Proof that supports that explanation, such as ads run, campaign screenshots, marketplace listings, press coverage, or promotion emails sent to customers.
+[ASK] Sample invoices or order records for the high-volume days, covering the largest transactions and a random sample of smaller ones.
+[ASK] Proof of delivery or service fulfilment for those sample orders (courier tracking numbers, delivery confirmations, or service completion records).
+[ASK] Current list of products or services actually being sold, with price ranges, to check they still match the declared business category (MCC 5399 - general merchandise).
+[ASK] Live website or app URL and any social media store links currently in use for accepting payments, if these have changed since onboarding.
+[ASK] Confirmation of whether the merchant has started selling through any new sales channel (new website, marketplace, reseller, or agent) that could explain the volume change.
+[ASK] Bank statement for the merchant's settlement account covering the spike period, to trace where settled funds go after payout.
+[ASK] GST returns or sales register extract for the recent period, to check that reported sales are consistent with the payment volumes seen.
+[ASK] Written confirmation that the merchant has not shared, rented, or sublet their payment account or terminals to any third party (no transaction laundering / no aggregation for others).
+[ASK] Details of top repeat customers or bulk buyers during the spike period, if any single buyers account for a large share of volume.
+[ASK] Refund and cancellation policy currently shown to customers, and confirmation it matches what was declared at onboarding.
+[ASK] Updated list of directors, beneficial owners, and authorised signatories, with confirmation that there has been no change in ownership or control since onboarding (and documents if there has been a change).
+[ASK] Confirmation of current registered and operating business address, with a recent utility bill or rent agreement if the address has changed.
+[ASK] Stock purchase records or supplier invoices for the spike period, to show the merchant actually had goods to sell at that scale.
+[INTERNAL] Full transaction-level data for the spike period and a normal baseline period: counts, ticket sizes, timestamps, success/failure rates, and payment methods used.
+[INTERNAL] Analysis of average ticket size during the spike versus the merchant's historical average, to spot sudden changes in transaction value patterns.
+[INTERNAL] Time-of-day and day-of-week pattern analysis, to spot unnatural patterns (for example: transactions at odd hours, evenly spaced "robotic" transactions, or round-number amounts).
+[INTERNAL] Card/customer concentration analysis: how many unique cards, UPI IDs, or customers made up the spike volume, and whether a few instruments were used repeatedly.
+[INTERNAL] Geographic analysis of transactions (customer IP locations, card issuing banks, UPI handles) compared with the merchant's normal customer footprint.
+[INTERNAL] Chargeback, dispute, and refund history for the account, including any disputes already raised on spike-period transactions.
+[INTERNAL] Failed and declined transaction rates during the spike, since card-testing or fraud attacks often show high decline rates.
+[INTERNAL] Original KYC file: certificate of incorporation, PAN, GST registration, board resolution, director KYC, and bank account proof collected at onboarding.
+[INTERNAL] Onboarding-time website/app review records and declared business model, to compare against what the merchant is selling now.
+[INTERNAL] Fresh screening of the merchant entity and its directors against sanctions lists, RBI caution/alert lists, negative news, and internal blocklists.
+[INTERNAL] Check of whether the merchant, its directors, or its bank account are linked to any other merchant accounts on the platform (shared phone, email, address, device, or account number).
+[INTERNAL] History of past risk flags, support tickets, and complaints on this account, including how earlier flags were resolved.
+[INTERNAL] Terminal and device telemetry for the spike period: device IDs, IP addresses, and locations from which payments were initiated or the dashboard was accessed, checked for unusual changes.
+[INTERNAL] Cybercrime and consumer complaint checks: any complaints received against this merchant through banks, NPCI, card networks, or the national cybercrime portal.
+[INTERNAL] Comparison of the merchant's spike-period pattern against known fraud typologies (card testing, transaction laundering, pass-through processing, bust-out) documented in the aggregator's risk playbook.
+[INTERNAL] Settlement and payout history to date, including any earlier holds, and the current amount held.
+[INTERNAL] Check of whether the merchant's declared MCC and pricing plan still fit the observed transaction behaviour, based on internal MCC-monitoring rules.

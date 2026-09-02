@@ -1,0 +1,5 @@
+# The project's only external dependency. Everything else is the standard
+# library. Pinned because the reproducibility claim in the README - a fresh
+# machine regenerates the data and reproduces every figure - is weaker if CI
+# installs a different version six months from now.
+pyyaml==6.0.3
